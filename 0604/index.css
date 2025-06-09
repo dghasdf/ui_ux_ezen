@@ -38,3 +38,44 @@ a {
     opacity: 1;
   }
 }
+
+#sect4 {
+  background: rgb(238, 238, 238) url(img/sect4_back.jpg) no-repeat
+    center/contain;
+}
+
+#sect4 .flex {
+  display: flex;
+  padding-left: 30%;
+  position: relative;
+}
+
+#sect4 .img_box2 {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+}
+
+#sect4 .fp-prev {
+  left: 0;
+  background: url(./image/slide_btn_prev.svg) no-repeat center/cover;
+}
+
+#sect4 .fp-next {
+  right: 0;
+  background: url(./image/slide_btn_next.svg) no-repeat center/cover;
+}
+
+.fp-arrow {
+  border: none;
+  width: 50%;
+  height: 50px;
+}
+
+#sect4 .slide.active .img1 {
+  animation-name: flipInX;
+}
+
+#sect4 .slide.active .img2 {
+  animation-name: wobble;
+}
