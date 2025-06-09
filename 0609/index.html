@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- jquery cdn.js -->
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
 
     <!-- swiper.cdn.css / js -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- pull page -->
@@ -18,80 +23,124 @@
     <script type="text/javascript" src="fullpage.js"></script>
 
     <!-- style.css / script.js -->
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
     <script src="./script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="hd_wrap">
-            <div class="logo"><a href="./index.html"><img src="./image/logo1.png" alt=""></a></div>
-            <nav>
-                <ul id="myMenu">
-                    <li data-menuanchor="page0" class="active"><a href="#page0">page0</a></li>
-                    <li data-menuanchor="page1"><a href="#page1">page1</a></li>
-                    <li data-menuanchor="page2"><a href="#page2">page2</a></li>
-                    <li data-menuanchor="page3"><a href="#page3">page3</a></li>
-                    <li data-menuanchor="page4"><a href="#page4">page4</a></li>
-                </ul>
-            </nav>
-            <div class="user_utill">
-                <a href="./image/main_icon1.png"></a>
-                <a href="./image/main_icon2.png"></a>
-                <a href="./image/main_icon3.png"></a>
-            </div>
-            <div class="menu_open"><button><img src="./image/bars-solid.svg" alt=""></button></div>
+      <div class="hd_wrap">
+        <div class="logo">
+          <a href="./index.html"><img src="./image/logo1.png" alt="" /></a>
         </div>
+        <nav>
+          <ul id="myMenu">
+            <li data-menuanchor="page0" class="active">
+              <a href="#page0">page0</a>
+            </li>
+            <li data-menuanchor="page1"><a href="#page1">page1</a></li>
+            <li data-menuanchor="page2"><a href="#page2">page2</a></li>
+            <li data-menuanchor="page3"><a href="#page3">page3</a></li>
+            <li data-menuanchor="page4"><a href="#page4">page4</a></li>
+          </ul>
+        </nav>
+        <div class="user_utill">
+          <a href="./image/main_icon1.png"></a>
+          <a href="./image/main_icon2.png"></a>
+          <a href="./image/main_icon3.png"></a>
+        </div>
+        <div class="menu_open">
+          <button><img src="./image/bars-solid.svg" alt="" /></button>
+        </div>
+      </div>
     </header>
     <main id="fullpage">
-        <section class="section" id="sect0">
-            <video src="./image/mini3.mp4" muted loop autoplay data-autoplay></video>
-            <div class="tit_box">
-                <strong>Lorem ipsum dolor sit amet.</strong>
-                <h1>site title</h1>
-                <div class="more"><a href=""><img src="./image/more.svg" alt="">read more</a></div>
+      <section class="section" id="sect0">
+        <video
+          src="./image/mini3.mp4"
+          muted
+          loop
+          autoplay
+          data-autoplay
+        ></video>
+        <div class="tit_box">
+          <strong>Lorem ipsum dolor sit amet.</strong>
+          <h1>site title</h1>
+          <div class="more">
+            <a href=""><img src="./image/more.svg" alt="" />read more</a>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sect1">
+        <div class="tit_box">
+          <h2>section title</h2>
+          <strong class="ellipsis1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+            doloribus, voluptatum officiis sed sequi veritatis qui ex dolorem
+            laborum non neque doloremque impedit aperiam error iusto nesciunt
+            tenetur magnam molestiae.
+          </strong>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./image/sect1_img1.jpg" alt="" />
             </div>
-        </section>
-        <section class="section" id="sect1">
-            <div class="tit_box">
-                <h2>section title</h2>
-                <strong class="ellipsis1">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, doloribus, voluptatum officiis sed
-                    sequi veritatis qui ex dolorem laborum non neque doloremque impedit aperiam error iusto nesciunt
-                    tenetur
-                    magnam molestiae.
-                </strong>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img2.jpg" alt="" />
             </div>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./image/sect1_img1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img3.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img1.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img2.jpg" alt=""></div>
-                    <div class="swiper-slide"><img src="./image/sect1_img3.jpg" alt=""></div>
-                </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img3.jpg" alt="" />
             </div>
-        </section>
-        <section class="section" id="sect2">
-            <div class="video_box">
-                <div class="youtube">
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/3mgY_urfSCw"
-                        title="Mini Cooper Register Beaulieu Works Mini 2025" frameborder="0" mute="autoplay"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img1.jpg" alt="" />
             </div>
-        </section>
-        <section class="section" id="sect3">Some section</section>
-        <section class="section" id="sect4">Some section</section>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img3.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img1.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img2.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./image/sect1_img3.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sect2">
+        <div class="video_box">
+          <div class="youtube">
+            <iframe
+              width="100%"
+              height="500"
+              src="https://www.youtube.com/embed/3mgY_urfSCw"
+              title="Mini Cooper Register Beaulieu Works Mini 2025"
+              frameborder="0"
+              mute="autoplay"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sect3">d</section>
+      <section class="section" id="sect4">Some section</section>
     </main>
-</body>
-
+  </body>
 </html>
