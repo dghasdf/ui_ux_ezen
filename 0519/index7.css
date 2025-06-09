@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Nanum+Gothic&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  background: url(/image/villa-5102551_1920.jpg);
+  color: #efefef;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid skyblue;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: skyblue;
+  font-family: 'Bangers', system-ui;
+}
+
+em {
+  font-style: normal;
+  color: pink;
+  display: block;
+}
+
+u {
+  text-decoration: none;
+}
+
+p {
+  font-size: 12px;
+}
+
+span {
+  width: 1000px;
+  font-weight: bold;
+  font-size: 500px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}

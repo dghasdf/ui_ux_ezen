@@ -1,0 +1,54 @@
+.wrap {
+  width: 1080px;
+  margin: auto;
+  border: 1px solid green;
+}
+
+.wrap > header {
+  height: 100px;
+  background-color: purple;
+}
+
+.wrap > footer {
+  height: 100px;
+  background-color: purple;
+}
+
+nav {
+  float: left;
+  width: 100px;
+  background-color: skyblue;
+  height: 300px;
+}
+
+section {
+  float: left;
+  width: calc(1080px - 200px);
+  background-color: orange;
+}
+
+aside {
+  float: left;
+  width: 100px;
+  background-color: skyblue;
+  height: 300px;
+}
+
+.contain {
+  overflow: hidden;
+}
+
+section header {
+  height: 50px;
+  background-color: skyblue;
+}
+
+section article {
+  height: 200px;
+  background-color: aquamarine;
+}
+
+section footer {
+  height: 50px;
+  background-color: red;
+}

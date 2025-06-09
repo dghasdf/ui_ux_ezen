@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  width: 50%;
+  margin: 0 auto;
+}
+
+nav > ul {
+  background-color: yellow;
+}
+
+nav > ul > li {
+  float: left;
+  margin: 0 30px;
+}
+
+nav > ul > li:hover ul {
+  opacity: 1;
+}
+
+nav ul ul {
+  opacity: 0;
+  transition: 1s;
+}

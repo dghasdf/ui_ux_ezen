@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    section {
+      height: 200vh;
+    }
+    section:nth-child(1) {
+      background-color: skyblue;
+    }
+    section:nth-child(3) {
+      background-color: pink;
+    }
+    .back {
+      background-image: url(/image/Aurora_borealis_over_Eielson_Air_Force_Base\,_Alaska.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      /* attachment = 스크롤해도 따라다님 */
+    }
+  </style>
+  <body>
+    <section>위</section>
+    <section class="back">중간</section>
+    <section>아래</section>
+  </body>
+</html>

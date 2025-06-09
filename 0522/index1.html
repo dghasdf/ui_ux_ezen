@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index1.css" />
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>개인정보</legend>
+      </fieldset>
+      <ul>
+        <li>
+          <label for="name">이름</label>
+          <input type="text" id="name" autofocus />
+        </li>
+        <li>
+          <label for="email">이메일주소</label>
+          <input type="email" id="email" />
+        </li>
+      </ul>
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ul>
+          <li>
+            <label for="id">아이디</label>
+            <input type="text" id="id" placeholder="아이디는 영문" required />
+          </li>
+          <li>
+            <label for="pw">패스워드</label>
+            <input type="password" id="pw" placeholder="영어 기호 숫자 12자 이상" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>부가정보</legend>
+        <ul>
+          <li>
+            <label for="web">웹주소</label>
+            <input type="url" id="web" />
+          </li>
+          <li>
+            <label for="tel">전화번호</label>
+            <input type="tel" id="tel" />
+          </li>
+        </ul>
+      </fieldset>
+      <input type="submit" value="보내기" class="submit" />
+    </form>
+  </body>
+</html>

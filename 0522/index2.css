@@ -1,0 +1,63 @@
+body {
+  background: url(/image/고양이.webp);
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrap {
+  width: 500px;
+  margin: 100px auto;
+  background-color: rgba(2, 7, 21, 0.1);
+  padding: 30px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+form {
+  width: 500px;
+}
+
+h1 {
+  text-align: center;
+  color: skyblue;
+}
+
+input {
+  background-color: pink;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+
+select {
+  background-color: pink;
+  height: 30px;
+}
+
+div {
+  margin: 20px 0;
+}
+
+.flex {
+  display: flex;
+  gap: 30px;
+}
+
+textarea {
+  width: 500px;
+  height: 100px;
+  background-color: transparent;
+  border: 1px solid skyblue;
+}
+
+.back input {
+  background-color: skyblue;
+  color: #fff;
+  padding: 2px 5px;
+}
+
+.back {
+  text-align: center;
+}

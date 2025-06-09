@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div span {
+      color: red;
+    }
+    div > span:nth-child(1) {
+      color: blue;
+    }
+    h1,
+    p {
+      color: green;
+    }
+    * {
+      color: yellow;
+    }
+  </style>
+  <body>
+    <h1>css 선택자</h1>
+    <div>
+      <span>css에서 html 요소를 선택하는 것</span>
+      선택을 통해 특정 요소들의 스타일을 적용할 수 있게 됩니다,
+      <p>
+        문장의 한군데에 모으면<span>스타일 시트</span>를 이루고ㅔ 되며, 많은 수의 스타일 규칙을
+        관리하기 쉬워집니다.
+      </p>
+    </div>
+    <span>div 형제 요소입니다.</span>
+  </body>
+</html>

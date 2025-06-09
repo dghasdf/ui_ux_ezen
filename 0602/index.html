@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 제이쿼리 -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 풀페이지.css -->
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <!-- 풀페이지.js -->
+    <script type="text/javascript" src="fullpage.js"></script>
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- script.js -->
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="hd_wrap">
+        <div class="logo">
+          <a href="index.html"><img src="./image/logo_b.png" alt="" /></a>
+        </div>
+        <nav>
+          <ul id="myMenu">
+            <li data-menuanchor><a href="#sect0">page0</a></li>
+            <li data-menuanchor><a href="#sect1">page1</a></li>
+            <li data-menuanchor><a href="#sect2">page2</a></li>
+            <li data-menuanchor><a href="#sect3">page3</a></li>
+            <li data-menuanchor><a href="#sect4">page4</a></li>
+            <li data-menuanchor><a href="#sect5">page5</a></li>
+            <li data-menuanchor><a href="#sect6">page6</a></li>
+          </ul>
+        </nav>
+        <div class="usericon">
+          <ul>
+            <li>
+              <a href=""><img src="./image/join_b.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./image/like_b.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./image/shopping_b.png" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img src="./image/search_b.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main id="fullpage">
+      <section class="section" id="sect0">
+        <video src="image/mp.mp4" muted loop autoplay data-autoplay></video>
+        <div class="tit_box">
+          <strong>Lorem, ipsum dolor.</strong>
+          <h1>Lorem, ipsum.</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Reiciendis, quod?
+          </p>
+        </div>
+      </section>
+      <section class="section" id="sect1">
+        <div class="center">
+          <div class="left animate__animated">
+            <img src="image/sect1.png" alt="" />
+          </div>
+          <div class="right animate__animated">
+            <p>
+              Lorem, ipsum dolor sit amet<br />
+              Lorem, ipsum dolor sit<br />
+              Lorem, ipsum dolor sit amet<br />
+              Lorem, ipsum dolor<br />
+              Lorem, ipsum dolor sit amet<br />
+              Lorem, ipsum dolor sit amet sit amet<br />
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sect2">
+        <div class="slide slide1 left">
+          <div class="tit_box">
+            <h1>slide1</h1>
+            <strong>tit_slide</strong>
+          </div>
+          <div class="img_box"><img src="image/sect2_1.png" alt="" /></div>
+          <div class="txt_box">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              numquam deserunt quas quaerat! Modi porro, nesciunt vel
+              exercitationem recusandae ab deserunt ea autem debitis, magni
+              molestiae amet sapiente quam! Necessitatibus.
+            </p>
+          </div>
+        </div>
+        <div class="slide slide2">
+          <div class="tit_box">
+            <h1>slide2</h1>
+            <strong>tit_slide</strong>
+          </div>
+          <div class="img_box"><img src="image/sect2_2.png" alt="" /></div>
+          <div class="txt_box">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              numquam deserunt quas quaerat! Modi porro, nesciunt vel
+              exercitationem recusandae ab deserunt ea autem debitis, magni
+              molestiae amet sapiente quam! Necessitatibus.
+            </p>
+          </div>
+        </div>
+        <div class="slide slide3">
+          <div class="tit_box">
+            <h1>slide3</h1>
+            <strong>tit_slide</strong>
+          </div>
+          <div class="img_box"><img src="image/sect2_3.png" alt="" /></div>
+          <div class="txt_box">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum
+              numquam deserunt quas quaerat! Modi porro, nesciunt vel
+              exercitationem recusandae ab deserunt ea autem debitis, magni
+              molestiae amet sapiente quam! Necessitatibus.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="sect3">slide 3</section>
+      <section class="section" id="sect4">slide 4</section>
+    </main>
+  </body>
+</html>

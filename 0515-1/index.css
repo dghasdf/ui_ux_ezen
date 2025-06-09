@@ -1,0 +1,34 @@
+.wrap {
+  width: 1000px;
+}
+.top {
+  text-align: center;
+  width: 100%;
+}
+.bottom {
+  display: flex;
+}
+
+.text-box {
+  width: 50%;
+}
+.img-box {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-box img {
+  width: 22.333333%;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  background-color: skyblue;
+  padding: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+em {
+  display: block;
+}

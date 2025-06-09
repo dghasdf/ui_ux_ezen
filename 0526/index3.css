@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+  margin: 0 auto;
+  position: relative;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: skyblue;
+  left: 0;
+  top: 0;
+  animation: change-color 5s 0.1s infinite forwards ease-in-out;
+}
+@keyframes change-color {
+  /* from {
+    background-color: red;
+  }
+  to {
+    background-color: pink;
+  } */
+  0% {
+    background-color: orange;
+    left: 0;
+    top: 0;
+  }
+  25% {
+    background-color: yellow;
+    left: 400px;
+    top: 0;
+  }
+  50% {
+    background-color: greenyellow;
+    left: 400px;
+    top: 400px;
+  }
+  75% {
+    background-color: green;
+    left: 0;
+    top: 400px;
+  }
+  100% {
+    background-color: green;
+    left: 0;
+    top: 0;
+  }
+}

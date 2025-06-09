@@ -1,0 +1,19 @@
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  /* 테이블 셀 사이의 테두리가 겹치게 보여준다 */
+}
+
+th {
+  font-weight: normal;
+  border: 1px solid #000;
+}
+
+td {
+  border: 1px solid #000;
+  text-align: center;
+}
+
+col {
+  width: 200px;
+}

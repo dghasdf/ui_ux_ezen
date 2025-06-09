@@ -1,0 +1,23 @@
+table {
+  width: 900px;
+  border-collapse: collapse;
+}
+
+thead th {
+  border-top: 2px solid skyblue;
+  border-bottom: 1px solid skyblue;
+  background-color: lightgray;
+}
+
+.red {
+  color: red;
+}
+
+tbody td {
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+tbody td:nth-child(2) {
+  text-align: left;
+}

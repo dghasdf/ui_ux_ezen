@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seoul Beer Festival</title>
+  <!-- babicon logo -->
+  <link rel="icon" href="./image/로고.png" />
+  <!-- style css -->
+  <link rel="stylesheet" href="css/.css/index.css" />
+  <!-- java js -->
+  <script defer src="./index.js"></script>
+  <!-- font aswsome -->
+  <script src="https://kit.fontawesome.com/d0d7b265e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- <div id="intro">
+      <h1>2025 서울 맥주페스티벌에<br />여러분을 환영합니다!</h1>
+    </div> -->
+
+  <div id="loadingSpinner">
+    <img src="/image/스피너.png" alt="로딩 중..." />
+  </div>
+
+  <div id="mainContent">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#ABOUT">ABOUT</a></li>
+          <li><a href="#LINEUP">LINEUP</a></li>
+          <li><a href="#ARTIST">ARTIST</a></li>
+
+          <img id="logoImg" src="/image/Group 58 (3).png" alt="" />
+
+          <li><a href="#TICKET">TICKET</a></li>
+          <li><a href="#MAP">MAP</a></li>
+          <li><a href="#GALLERY">GALLERY</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="slider">
+        <div class="slides">
+          <!-- 마지막 슬라이드 클론 -->
+          <div class="main-slide">
+            <img src="/image/메인5.jpg" alt="Clone Last" />
+          </div>
+
+          <!-- 실제 슬라이드 -->
+          <div class="main-slide">
+            <img src="/image/메인3.jpg" alt="Slide 1" />
+          </div>
+          <div class="main-slide">
+            <img src="/image/메인2.jpg" alt="Slide 2" />
+          </div>
+          <div class="main-slide">
+            <img src="/image/메인1.jpg" alt="Slide 3" />
+          </div>
+          <div class="main-slide">
+            <img src="/image/메인5.jpg" alt="Slide 4" />
+          </div>
+
+          <!-- 첫 슬라이드 클론 -->
+          <div class="main-slide">
+            <img src="/image/메인3.jpg" alt="Clone First" />
+          </div>
+        </div>
+      </div>
+      <!-- 영상으로 대체할 시 -->
+      <!-- <iframe
+          src="https://www.youtube.com/embed/UsJf95g6Sss?autoplay=1&mute=1&controls=0&loop=1&playlist=UsJf95g6Sss"
+          frameborder="none"
+          allowfullscreen
+          allow="autoplay; encryted-media"
+          allowfullscreen
+        > 
+        </iframe> -->
+      <div class="overlay">
+        <h1>여름이 기다려지는 순간!</h1>
+        <p>#단 한번뿐인 시간</p>
+      </div>
+    </main>
+    <div id="ABOUT">
+      <div class="imgbox">
+        <div class="imgborder">
+          <img class="img2" src="./image/Group 72.png" alt="" />
+        </div>
+        <!-- <div class="a">
+            <a href="">Naver Map</a>
+          </div> -->
+      </div>
+    </div>
+    <div id="LINEUP">
+      <h1>LINE UP</h1>
+      <div class="menu">
+        <div class="tab active" data-tab="Beer">BEER</div>
+        <div class="tab" data-tab="Food">FOOD</div>
+      </div>
+      <div class="tab-content active" id="Beer">
+        <div class="imagesbox">
+          <div class="imagebox">
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/kelly.png" alt="Beer1" data-title="켈리" data-desc="강한 청량감과 진한 맛의 올몰트 맥주!"
+                  data-sub="재료:보리 / 도수:4.5도" />
+              </div>
+              <p>켈리</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/kloud.png" alt="Beer1" data-title="클라우드" data-desc="높은 바디감과 쓴맛을 자랑하는 독일맥주!"
+                  data-sub="재료:보리,홉 / 도수:5도 " />
+              </div>
+              <p>클라우드</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/kronenbourg.png" alt="Beer1" data-title="크로넨버그블랑"
+                  data-desc="달달한 맛과 독특향이 일품인 프랑스산 밀맥주!" data-sub="재료:오렌지껍질, 코리안더 씨앗 / 도수:5도" />
+              </div>
+              <p>크로넨버그블랑</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/krush.png" alt="Beer1" data-title="크러시" data-desc="가벼운 목넘김 달달함의 일품인 페일라거 맥주!"
+                  data-sub="재료:올몰트 / 도수4.5도" />
+              </div>
+              <p>크러시</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/redbull.png" alt="Beer1" data-title="레드불" data-desc="지친사람들이 찾기되는 에너지드링크!"
+                  data-sub="재료:정제수,설탕,포도당,카페인" />
+              </div>
+              <p>레드불</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/terra.png" alt="Beer1" data-title="테라" data-desc="단맛과 강한 탄산수처럼 깔끔한 청정라거!"
+                  data-sub="재료:정제수,보리,전분 / 도수:4.6도" />
+              </div>
+              <p>테라</p>
+            </div>
+          </div>
+          <div class="imagebox">
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/tsingtao.png" alt="Beer1" data-title="칭따오" data-desc="달달함과 시원한 청량감의 중국의 대표쌀맥주!"
+                  data-sub="보리,효모,쌀 / 도수:4.7도" />
+
+              </div>
+              <p>칭따오</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/cass.png" alt="Beer1" data-title="카스" data-desc="강렬한 탄산과 가벼운 느낌의 대표 맥주!"
+                  data-sub="보리,홉 / 도수:6도" />
+              </div>
+              <p>카스</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/bude.png" alt="Beer1" data-title="버드와이저" data-desc="가볍고 깔끔함맛과 부드러운 탄산의 미국의 대표 맥주!"
+                  data-sub="재료:옥수수,보리 / 도수:5도" />
+              </div>
+              <p>버드와이저</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/guinness.png" alt="Beer1" data-title="기네스" data-desc="씁쓸함과 단맛의 어울러짐의 아일랜드 대표 흑맥주!"
+                  data-sub="재료:볶은보리,홉,효모 / 도수:4.2도" />
+              </div>
+              <p>기네스</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/heineken.png" alt="Beer1" data-title="하이네켄" data-desc="쌉쌉함과 깔끔한 뒷맛의 네덜란드 대표 맥주!"
+                  data-sub="보리,홉,효모 / 도수:5도" />
+              </div>
+              <p>하이네켄</p>
+            </div>
+            <div class="imagess">
+              <div class="beer-images">
+                <img src="./image/hoegaarden.png" alt="Beer1" data-title="호가든" data-desc="깔끔하면서도 가벼운 벨기에의 대표 에일 밀맥주!"
+                  data-sub="보리,홉,오렌지껍질 / 도수:4.5도" />
+              </div>
+              <p>호가든</p>
+            </div>
+          </div>
+        </div>
+        <p class="default-text">원하는 맥주를 클릭해보세요</p>
+        <div class="beer-info" style="display: none">
+          <h4 class="beer-title">맥주 이름</h4>
+          <!-- 제목용 -->
+          <p class="beer-desc">맥주 설명이 나옵니다.</p>
+          <p class="beer-sub"></p>
+          <!-- 본문용 -->
+        </div>
+      </div>
+      <div class="tab-content" id="Food">
+        <div class="imagesbox">
+          <div class="imagebox">
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/바베큐.jpg" alt="Food1" data-title="푸드랜드"
+                  data-desc="텍사스의 분위기를 느낄 수 있는 바베큐! 치킨바베큐와 돼지목살 바베큐 두개 준비 중!" data-sub="재료:국내산" />
+              </div>
+              <p>푸드랜드</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/피자.jpg" alt="Food2" data-title="스트릿피자" data-desc="치즈가 잔뜩 뿌려진 상태로 화덕속에 구워 쫄깃한 치즈피자!"
+                  data-sub="원산지:국내산,호주산" />
+              </div>
+              <p>스트릿피자</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/새우.jpg" alt="Food2" data-title="오사카야끼" data-desc="신선한 새우튀김과 3가지의 소수가 어우러진 새우강정!"
+                  data-sub="원산지:에콰도르" />
+              </div>
+              <p>오사카야끼</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/소세지.jpg" alt="Food2" data-title="햅스후"
+                  data-desc="맥주를 먹는데 소세지가 빠질 수는 없지! 독일의 느낌을 알고 싶다면 여기로!" data-sub="원산지:국내산" />
+              </div>
+              <p>햅스후</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/양념치킨.jpg" alt="Food2" data-title="명진치킨"
+                  data-desc="바삭바삭하게 조리한 치킨에 새콤달콤한 소스를 곁들인 최고의 조합!" data-sub="원산지:국내산" />
+              </div>
+              <p>명진치킨</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/오사카푸드.jpg" alt="Food2" data-title="오사카푸드"
+                  data-desc="일본감성으로 만들어낸 철판요리 느끼한 음식을 먹고싶으면 여기로와!" data-sub="원산지:국내산 " />
+              </div>
+              <p>오사카푸드</p>
+            </div>
+          </div>
+          <div class="imagebox">
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/치킨.jpg" alt="Food1" data-title="바베큐" data-desc="맥주와 잘 어울리는 바삭한 치킨입니다."
+                  data-sub="원산지:국내산" />
+              </div>
+              <p>치킨</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/타코야키.jpg" alt="Food2" data-title="타코야끼러버" data-desc="큰 문어를 넣어 쫄깃한 식감과 어울러진 모두가 아는 간식!"
+                  data-sub="원산지:호주" />
+              </div>
+              <p>타코야키러버</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/건어물.jpg" alt="Food2" data-title="피자" data-desc="치즈가 듬뿍 올라간 고르곤졸라 피자입니다."
+                  data-sub="원산지: 국내산" />
+              </div>
+              <p>건어물</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/닭강정.jpg" alt="Food2" data-title="치강정" data-desc="양념치킨을 한입에 먹기 좋은 사이즈로 만들어낸 치킨푸드!"
+                  data-sub="원산지:국내산" />
+              </div>
+              <p>치강정</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/맛집트럭.jpg" alt="Food2" data-title="맛집트럭" data-desc="소고기의 부채살을 토치로 사용해 강한 불맛을 낸 불초밥!"
+                  data-sub="원산지:국내산" />
+              </div>
+              <p>맛집트럭</p>
+            </div>
+            <div class="imagess">
+              <div class="food-images">
+                <img src="./image/닭꼬치.jpg" alt="Food2" data-title="꼬꼬댁" data-desc="이렇게 길쭉한 닭꼬치 봤나?! 40cm의 대한민국 원탑 닭꼬치!"
+                  data-sub="원산지:국내산" />
+              </div>
+              <p>꼬꼬댁</p>
+            </div>
+          </div>
+        </div>
+        <p class="food-default-text">원하는 음식을 클릭해보세요</p>
+        <div class="food-info" style="display: none">
+          <h4 class="food-title">음식 이름</h4>
+          <p class="food-desc">음식 설명이 나옵니다.</p>
+          <p class="food-sub"></p>
+        </div>
+      </div>
+    </div>
+    <div id="ARTIST">
+      <div class="lineup">
+        <ul class="tab-menu">
+          <h1>2025</h1>
+          <h2>ARTIST</h2>
+          <ul class="daybox">
+            <li class="active" data-tab="band">SATDAY</li>
+            <li data-tab="talk">SUNDAY</li>
+          </ul>
+        </ul>
+
+        <div class="slider-wrapper">
+          <div class="slider band active">
+            <div class="slider-track">
+              <div class="slide">
+                <img src="./image/attez.jpg" />
+              </div>
+
+              <div class="slide">
+                <img src="./image/heats2hearts.jpg" />
+              </div>
+              <div class="slide">
+                <img src="./image/dragon pony.jpg" />
+              </div>
+              <div class="slide">
+                <img src="./image/qwer.jpg" />
+              </div>
+            </div>
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+            <div class="dots"></div>
+          </div>
+          <div class="slider talk">
+            <div class="slider-track">
+              <div class="slide">
+                <img src="./image/kwill.jpg" />
+              </div>
+              <div class="slide">
+                <img src="./image/davichi.jpg" />
+              </div>
+              <div class="slide">
+                <img src="./image/kkiiikiii.jpg" />
+              </div>
+              <div class="slide">
+                <img src="./image/lucy.jpg" />
+              </div>
+            </div>
+            <button class="prev">‹</button>
+            <button class="next">›</button>
+            <div class="dots"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="TICKET">
+      <div class="ticketboxs">
+        <h1>SBF TICKET</h1>
+        <div class="ticketbox">
+          <div class="boxs">
+            <img src="./image/티켓토.png" alt="토요일티켓" />
+            <div class="tickettext">
+              <h2>[1일/토요일 페스티벌 입장권]</h2>
+              <p>00월00일(토), 1일권티켓</p>
+              <p>10,000원</p>
+            </div>
+          </div>
+          <div class="boxs">
+            <img src="./image/티켓일.png" alt="토요일티켓" />
+            <div class="tickettext">
+              <h2>[1일/일요일 페스티벌 입장권]</h2>
+              <p>00월00일(일), 1일권티켓</p>
+              <p>10,000원</p>
+            </div>
+          </div>
+          <div class="boxs">
+            <img src="./image/티켓이틀.png" alt="투데이티켓" />
+            <div class="tickettext">
+              <h2>[2일/투데이 페스티벌 입장권]</h2>
+              <p>00월00일(토)~(일), 2일권티켓</p>
+              <p>20,000원</p>
+            </div>
+          </div>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-arrow-down"></i>
+          <i class="fa-solid fa-arrow-down"></i>
+          <i class="fa-solid fa-arrow-down"></i>
+        </div>
+        <!-- <h2 class="site">예매사이트</h2> -->
+        <div class="link">
+          <a href="https://www.naver.com">NAVER</a>
+          <a href="https://nol.interpark.com/">INTERPARK</a>
+          <a href="http://ticket.yes24.com/New/Main.aspx">YES24</a>
+          <a href="https://www.dreamtheatre.co.kr/">DREAM THEATRE</a>
+        </div>
+      </div>
+    </div>
+    <div id="MAP">
+      <div class="mapcontainer">
+        <h1>MAP</h1>
+        <div class="maptBox" id="mapBox">
+          <img src="./image/MAP.png" alt="MAP" />
+          <div class="mapText_Iconbox">
+            <div class="maptextbox">
+              <p class="h1">오시는길</p>
+              <div class="mapp">
+                <div class="p1box">
+                  <div class="p1">
+                    <p>주</p>
+                    <p class="p1-1">소 :</p>
+                  </div>
+                  <p class="p1-2">올림픽로25 서울종합운동장</p>
+                </div>
+                <div class="p2box">
+                  <div class="p2">
+                    <p>도</p>
+                    <p class="p2-1">보 :</p>
+                  </div>
+                  <p class="p2-2">
+                    2호선 종합운동장역6, 7번 출구에서 약 500M
+                  </p>
+                </div>
+                <div class="p3box">
+                  <div class="p3">
+                    <p>지</p>
+                    <p class="p3-1">하</p>
+                    <p class="p3-2">철 :</p>
+                  </div>
+                  <p class="p3-3">2호선 종합운동장역6, 7번 출구</p>
+                </div>
+                <div class="p4box">
+                  <div class="p4">
+                    <p>버</p>
+                    <p class="p4-1">스 :</p>
+                  </div>
+                  <p class="p4-2">잠실종합운동장역 하차</p>
+                </div>
+                <div class="p5box">
+                  <div class="p5">
+                    <p>문</p>
+                    <p class="p5-1">의</p>
+                    <p class="p5-2">전</p>
+                    <p class="p5-3">화 :</p>
+                  </div>
+                  <p class="p5-4">010.9109.8419</p>
+                </div>
+              </div>
+            </div>
+            <div class="iconbox">
+              <div class="mapIcon">
+                <a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="facebook"><i class="fa-brands fa-square-facebook"></i></a>
+              </div>
+              <div class="map_button"></div>
+              <a href="#" class="flip-button" front="Naver Map" back="&#xf1d8;" data-scroll-nav="6">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="GALLERY">
+      <div class="gallerybox">
+        <h1>GALLERY</h1>
+        <div class="infinite-slider">
+          <div class="slide-track">
+            <div class="slide-set">
+              <img class="" src="./image/gallery1.jpg" />
+              <img src="./image/gallery2.jpeg" />
+              <img src="./image/gallery3.jpg" />
+              <img src="./image/gallery4.jpeg" />
+              <img src="./image/gallery5.png" />
+              <img src="./image/gallery6.jpeg" />
+              <img src="./image/gallery7.jfif" />
+            </div>
+            <!-- 복제 -->
+            <div class="slide-set">
+              <img src="./image/gallery1.jpg" />
+              <img src="./image/gallery2.jpeg" />
+              <img src="./image/gallery3.jpg" />
+              <img src="./image/gallery4.jpeg" />
+              <img src="./image/gallery5.png" />
+              <img src="./image/gallery6.jpeg" />
+              <img src="./image/gallery7.jfif" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="footerbox">
+        <div class="footerbox1">
+          <h1>SEOUL BEER FESTIVAL</h1>
+          <div class="footer1">
+            <span>주최사: 서울문화포털</span>
+            <span>대표자: 김준영</span>
+            <span>주소: 서울특별시 중랑구</span>
+          </div>
+          <div class="footer2">
+            <span>사업자등록번호: 213-123-4567</span>
+            <span>고객센터: 010-9109-8419</span>
+          </div>
+          <span class="footer3">Copyright&copy; 서울맥주페스티벌.All rights reserved.</span>
+        </div>
+        <div class="footer4">
+          <span>회사소개</span>
+          <span>이용약관</span>
+          <span>개인정보 취급방법</span>
+          <span>이용안내</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modalbox">
+          <span class="close">&times;</span>
+          <img src="" alt="popup" id="modalImage" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button id="goToBtn">↑</button>
+  <!-- 슬라이드 어바웃 -->
+</body>
+
+</html>

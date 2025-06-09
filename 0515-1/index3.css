@@ -1,0 +1,16 @@
+.wrap {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+}
+.text-box {
+  padding-left: 20px;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+a {
+  text-decoration: none;
+}

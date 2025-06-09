@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrap {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.top {
+  margin-bottom: 50px;
+}
+
+strong {
+  display: block;
+}
+.top {
+  text-align: center;
+}
+
+em {
+  font-style: normal;
+  display: block;
+  justify-content: flex-start;
+}
+
+.textbox {
+  width: 50%;
+}
+.imgbox {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  /* 밑에 33%를 주어서 전체에 3개의 이미지만
+  들어가는데 flex를 주면 무시하고 쭉 정렬된다.
+  그러기에 flex-wrap: wrap을 주면 밑으로 내려간다 */
+}
+
+.imgbox img {
+  width: 33.3333%;
+}
+
+.bottom {
+  display: flex;
+}

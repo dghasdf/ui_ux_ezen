@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+:root {
+  --main-color: #0098a1;
+  --red: tomato;
+  --black: #334;
+  --white: #fff;
+  --light-color: #777;
+  --light-bg: #f6f6f6;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  --border: 0.1rem solid var(--main-color);
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+  scroll-padding-top: 6.5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.heading {
+  font-family: 'Kalam', cursive;
+  color: var(--black);
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span {
+  font-family: 'Kalam', cursive;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.btn,
+.border-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  transition: 0.2s linear;
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.border-btn {
+  border: var(--border);
+  background-color: var(--white);
+  color: var(--main-color);
+}
+
+.btn:hover {
+  background-color: var(--black);
+}
+
+.border-btn:hover {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 3rem;
+  transition: 0.2s linear;
+  z-index: 1000;
+}
+
+.header .flex {
+  background-color: var(--white);
+  box-shadow: var(--dark-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.header.active {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  padding-top: 0;
+}
+
+.header.active .flex {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.header .logo {
+  color: var(--black);
+  font-size: 2rem;
+}
+
+.header .logo span {
+  color: var(--main-color);
+}
+
+.header .navbar a {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+  color: var(--light-color);
+  text-transform: capitalize;
+}
+
+.header .navbar a.active,
+.header .navbar a:hover {
+  color: var(--main-color);
+}
+
+#menu-btn {
+  font-size: 3rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+.height {
+  height: 10000px;
+}

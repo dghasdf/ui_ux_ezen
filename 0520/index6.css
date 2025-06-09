@@ -1,0 +1,29 @@
+table {
+  /* border: 1px solid #000; */
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border-bottom: 1px solid skyblue;
+  text-align: center;
+  /* 이렇게 넣으면 점선이 생겨서 콜렙스를 넣으면된다 */
+}
+
+thead th {
+  background-color: skyblue;
+  font-weight: normal;
+}
+
+col:nth-child(1) {
+  width: 50px;
+}
+col:nth-child(2) {
+  width: 50px;
+}
+col:nth-child(3) {
+  width: 50px;
+}
+col:nth-child(4) {
+  width: 50px;
+}

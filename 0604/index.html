@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- fullpage -->
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <script type="text/javascript" src="fullpage.js"></script>
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- style.css,js -->
+    <link rel="stylesheet" href="./index.css">
+    <script src="./script.js"></script>
+</head>
+<ul id="myMenu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
+    <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+    <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+</ul>
+
+<body>
+    <div id="fullpage">
+        <div class="section" id="sect0">Some section</div>
+        <div class="section" id="sect1">
+            <div class="slide"> Slide 1 </div>
+            <div class="slide"> Slide 2 </div>
+            <div class="slide"> Slide 3 </div>
+            <div class="slide"> Slide 4 </div>
+        </div>
+        <div class="section" id="sect2">
+            <div class="left slide animate__animated animate__bounce animate__delay-2s">left</div>
+            <div class="right slide animate__animated animate__bounce">right</div>
+        </div>
+        <div class="section" id="sect3">Some section</div>
+        <section class="section" id="sect3">
+            <div class="pd_right">
+                <div class="slider">
+                    <div><img src="image/sect3_img1.jpg" alt=""></div>
+                    <div><img src="image/sect3_img2.jpg" alt=""></div>
+                    <div><img src="image/sect3_img3.jpg" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="sect4">
+            <div class="slide">
+                <div class="flex">
+                    <div class="img_box1 img_box">
+                        <img class="img1 animate__animated" src="./image/sect4_1_1.png" alt="">
+                    </div>
+                    <div class="img_box2 img_box">
+                        <img class="img2 animate__animated" src="./image/sect4_1_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

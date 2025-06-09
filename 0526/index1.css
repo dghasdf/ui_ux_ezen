@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  width: 500px;
+  height: 500px;
+  background-color: skyblue;
+  position: relative;
+}
+
+div img {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  transition: all 2s 1s cubic-bezier(0, 1.01, 1, 0.02);
+  /* 큐빅 베이저는 검색으로 사이트 들어가서 계산하기 */
+  /* 초에 ,넣으면 바로 실행된다 안넣으면 2초후에 움직임 */
+}
+
+div:hover img {
+  left: 400px;
+  top: 425px;
+  opacity: 1;
+}

@@ -1,0 +1,48 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 50px auto;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid lightgray;
+}
+
+thead th {
+  background-color: gray;
+}
+
+tr {
+  height: 50px;
+}
+
+td {
+  border-top: 1px solid gray;
+}
+tbody th {
+  border-top: 1px solid gray;
+  border-radius: 1px soild gray;
+}
+
+thead th:nth-child(1) {
+  border-right: 1px solid gray;
+}
+thead th:nth-child(2) {
+  border-right: 1px solid gray;
+}
+thead th:nth-child(3) {
+  border-right: 1px solid gray;
+}

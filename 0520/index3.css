@@ -1,0 +1,23 @@
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+tr:nth-child(1) th {
+  background-color: #000;
+  color: #fff;
+}
+
+th {
+  background-color: gray;
+}
+
+.pink {
+  background-color: pink;
+}

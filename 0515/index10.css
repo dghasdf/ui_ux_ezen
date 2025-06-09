@@ -1,0 +1,22 @@
+.custom-list {
+  width: 800px;
+  height: 500px;
+  list-style: none;
+  counter-reset: my-counter 2020;
+  display: flex;
+  gap: 50px;
+
+  li {
+    counter-increment: my-counter;
+    position: relative;
+    padding-left: 50px;
+
+    &::after {
+      content: counter(my-counter) '';
+      left: 0;
+      color: #1200e8;
+      padding-right: 10px;
+      margin-right: 10px;
+    }
+  }
+}

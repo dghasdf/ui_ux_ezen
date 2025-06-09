@@ -1,0 +1,35 @@
+a {
+  width: 100px;
+  height: 50px;
+  background-color: skyblue;
+  display: block;
+  /* 인라인블록 안하면 너비높이를 못줌 */
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid pink;
+  float: left;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+}
+
+ul {
+  width: 400px;
+}

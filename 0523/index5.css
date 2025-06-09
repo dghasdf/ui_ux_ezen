@@ -1,0 +1,27 @@
+.wrap {
+  width: 1280px;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+main {
+  display: flex;
+}
+
+.contain {
+  flex: 3;
+}
+
+aside {
+  flex: 1;
+  border: 1px solid gray;
+}
+
+header {
+  border: 1px solid gray;
+  padding: 20px 0;
+}
+
+footer {
+  border: 1px solid gray;
+}

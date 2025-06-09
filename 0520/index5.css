@@ -1,0 +1,36 @@
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+tr,
+td {
+  border: 1px solid #000;
+}
+
+col {
+  width: 200px;
+}
+
+thead tr:nth-child(1) th {
+  background-color: #000;
+  color: #fff;
+}
+thead tr:nth-child(2) th {
+  background-color: gray;
+}
+
+tfoot th,
+tfoot td {
+  background: gray;
+  font-weight: bold;
+}
+
+col:nth-child(odd) {
+  background-color: rgba(0, 128, 0, 0.397);
+}
+/* 홀수번째 */
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 255, 0.525);
+}
+/* 짝수번째 */

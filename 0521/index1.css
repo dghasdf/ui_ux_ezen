@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 50px auto;
+  border: 2px solid gray;
+  border-bottom: 2px solid gray;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+tr {
+  height: 50px;
+}
+
+th {
+  background: lightcyan;
+}
+
+col:nth-child(1) {
+  width: 200px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+td {
+  padding-left: 30px;
+  border-bottom: 1px solid gray;
+}
