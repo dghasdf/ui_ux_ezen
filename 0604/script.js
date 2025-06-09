@@ -38,6 +38,10 @@ $(document).ready(function () {
       }
     },
   });
+  $(".top_btn").click(function () {
+    fullpage_api.moveTo("page0");
+  });
+
   $(".slider").bxSlider({
     mode: "fade",
     auto: true,
