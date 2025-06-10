@@ -1,0 +1,5 @@
+swiper = $(document).ready(function () {
+ = 내용 
+}
+
+스크립트에 추가 펑션넣어야함
