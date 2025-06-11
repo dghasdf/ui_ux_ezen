@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김준영 포토폴리오</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
+    <!-- gsap.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- scrolltrgger cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<body>
-    <div class="h2">
-        <h1>sadfasdfasdfsda</h1>
-    </div>
-</body>
+    <!-- animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
+    <!-- style.js / script.js -->
+    <link rel="stylesheet" href="./index.css" />
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <div class="custom-cursor">cursor</div>
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <img src="./image/logo.png" class="hover-target" alt="logo" />
+        </div>
+        <ul>
+          <li class="hover-target"><a href="">Intro</a></li>
+          <li class="hover-target"><a href="">About</a></li>
+          <li class="hover-target"><a href="">Project</a></li>
+          <li class="hover-target"><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <div id="main">
+        <div class="main_text">
+          <div class="first">
+            <h1 class="first_text">Portfolio</h1>
+            <div class="hover_text">
+              <img src="./image/comtuter.png" alt="comtuter" />
+              <div class="circle"></div>
+            </div>
+            <div class="span_box">
+              <span>안녕하세요 퍼블리셔 <br />김준영이라고 합니다!</span>
+            </div>
+          </div>
+          <h1 class="second_text">Design</h1>
+          <div class="second">
+            <div class="hover_text2">
+              <img src="./image/sc.png" alt="sc" />
+              <div class="circle2"></div>
+            </div>
+            <div class="span_box2">
+              <span>모든지 체력이 중요하죠<br />매주 축구를 즐겨합니다!</span>
+            </div>
+
+            <h1 class="third_text">Publisher</h1>
+          </div>
+          <h1 class="fourth_text">Joo Nyeng</h1>
+          <svg
+            width="735"
+            height="34"
+            viewBox="0 0 735 34"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 17.5727C11.7521 28.5893 40.195 44.0125 67.9493 17.5727C95.7037 -8.86709 122.677 4.14052 132.694 13.9493C143.068 22.8065 170.447 36.8974 196.975 22.4039C230.135 4.28692 229.579 -4.30786 262.996 13.9493C296.413 32.2065 300.179 38.9836 330.525 22.4039C360.872 5.82411 369.628 -8.55965 407.337 22.4039C437.505 47.1747 468.717 22.7699 480.552 7.47111C487.707 0.736727 508.562 -6.53934 534.738 18.2315C560.915 43.0023 591.516 28.5527 603.544 18.2315C613.987 7.65411 641.509 -7.15421 668.057 18.2315C694.605 43.6172 723.287 28.8089 734.31 18.2315"
+              stroke="#FF6D70"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </div>
+    </main>
+    <div id="Intro"></div>
+  </body>
 </html>
