@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Cafe24ClassicType-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+$font-family-exo: "Exo 2", sans-serif;
+$font-family-cafe24: "Cafe24ClassicType-Regular";
+$font-family-pertendard: "Pretendard-Regular";
+$main-color: #ff6d70;
+$sub-color: #27db95;
+$color-gray3: #333;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: none;
+  // scroll-behavior: smooth;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../image/p6.webp);
+
+  .custom-cursor {
+    position: fixed;
+    text-align: center;
+    line-height: 60px;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    font-size: 12px;
+    border-radius: 50%;
+    pointer-events: none; // 클릭 막지 않기
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    z-index: 100000;
+    font-family: $font-family-pertendard;
+    font-weight: bold;
+    &.hovered {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 12px;
+      color: $main-color;
+      border: 1px solid $main-color;
+      font-family: $font-family-pertendard;
+      font-weight: bold;
+    }
+  }
+  header {
+    width: 100%;
+    position: fixed;
+    background: none;
+    background-color: #fff;
+    z-index: 999;
+    transition: background-color 0.3s ease;
+
+    &.scrolled {
+      background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+      backdrop-filter: blur(8px); // 선택사항: 흐림 효과
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+    }
+    .nav {
+      padding: 0 240px;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      .logo {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        font-family: $font-family-cafe24;
+
+        li {
+          font-size: 20px;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+  a {
+    cursor: none;
+  }
+  i {
+    padding-top: 120px;
+    margin: 0 240px;
+    font-size: 40px;
+    color: $main-color;
+    cursor: none;
+  }
+  .olive {
+    padding-top: 40px;
+    margin: 0 240px;
+
+    h1 {
+      font-size: 40px;
+      font-family: $font-family-exo;
+      margin-bottom: 32px;
+    }
+    .text_box {
+      padding: 40px 0;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $sub-color;
+        border-radius: 30px;
+        color: #fff;
+        span {
+          color: $main-color;
+        }
+      }
+      p {
+        font-size: 24px;
+        font-family: $font-family-pertendard;
+      }
+      span {
+        color: $sub-color;
+      }
+    }
+  }
+  .info_link {
+    margin: 64px 240px;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 32px;
+      font-family: $font-family-exo;
+    }
+    .text_container {
+      padding: 40px 0;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $sub-color;
+        border-radius: 30px;
+        color: #fff;
+        span {
+          color: $main-color;
+        }
+      }
+      .text1,
+      .text2,
+      .text3,
+      .text4,
+      .text5,
+      .text6 {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 16px;
+
+        h6 {
+          font-size: 24px;
+          font-weight: bold;
+          width: 200px;
+
+          font-family: $font-family-pertendard;
+        }
+        p {
+          font-size: 24px;
+          font-family: $font-family-pertendard;
+        }
+      }
+    }
+  }
+  .problem {
+    margin: 64px 240px;
+    h1 {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: $font-family-exo;
+      margin-bottom: 32px;
+    }
+    .problem_container {
+      padding: 40px 0;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $sub-color;
+        border-radius: 30px;
+        color: #fff;
+        span {
+          color: $main-color;
+        }
+      }
+
+      p {
+        font-size: 24px;
+        font-family: $font-family-pertendard;
+      }
+      span {
+        color: $sub-color;
+        font-family: $font-family-pertendard;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    border-top: 1px solid #999;
+    .footer_container {
+      margin: 40px 240px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .footer_text1 {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  }
+}

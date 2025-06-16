@@ -36,23 +36,30 @@ body {
 body .custom-cursor {
   position: fixed;
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
   top: 0;
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 1px solid #000;
+  font-size: 12px;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
-  z-index: 9999;
+  z-index: 100000;
+  font-family: "Pretendard-Regular";
+  font-weight: bold;
 }
 body .custom-cursor.hovered {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
   color: #ff6d70;
   border: 1px solid #ff6d70;
+  font-family: "Pretendard-Regular";
+  font-weight: bold;
 }
 body header {
   width: 100%;
@@ -60,6 +67,13 @@ body header {
   background: none;
   background-color: #fff;
   z-index: 999;
+  transition: background-color 0.3s ease;
+}
+body header.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 body header .nav {
   padding: 0 240px;
@@ -96,7 +110,8 @@ body #main .main_text {
   width: 100%;
   height: 100%;
   font-family: "Cafe24ClassicType-Regular";
-  padding-top: 160px;
+  padding-top: 120px;
+  margin-bottom: 108px;
 }
 body #main .main_text .first {
   display: flex;
@@ -152,14 +167,12 @@ body #main .main_text .first .hover_text:hover + .span_box {
   height: 50px;
   background-color: #27db95;
   text-align: center;
-  top: 10%;
-  left: 56%;
+  top: 7%;
+  left: 51%;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 50px;
   font-size: 14px;
   border-radius: 10px;
   transition: all 0.3s;
@@ -229,8 +242,8 @@ body #main .main_text .second .hover_text2 .circle2 {
   }
 }
 body #main .main_text .second .hover_text2:hover + .span_box2 {
-  bottom: 44%;
-  right: 59%;
+  bottom: 52%;
+  right: 62%;
   width: 200px;
   height: 50px;
   background-color: #27db95;
@@ -261,6 +274,7 @@ body #main .main_text .fourth_text {
   margin-top: 32px;
 }
 body #main .main_text path {
+  margin-bottom: 148px;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: drawLine 2s forwards ease-out;
@@ -273,4 +287,456 @@ body #main .main_text path {
 body #Intro {
   width: 100%;
   height: 100vh;
+  padding: 0 240px;
+  margin-top: 200px;
+}
+body #Intro .intro_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #Intro .intro_container span,
+body #Intro .intro_container p {
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+body #Intro .intro_container .span_first {
+  width: 100%;
+  font-family: "Exo 2", sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #Intro .intro_container .span_second {
+  font-family: "Pretendard-Regular";
+  font-size: 4rem;
+  margin-top: 100px;
+}
+body #Intro .intro_container .p_first {
+  font-family: "Pretendard-Regular";
+  font-size: 36px;
+  text-align: center;
+  margin-top: 45px;
+  min-height: 150px;
+}
+body #Intro .intro_container .circle_button {
+  width: 40px;
+  height: 90px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 100px;
+  cursor: pointer;
+}
+body #Intro .intro_container i {
+  margin-bottom: 8px;
+}
+body #Intro .intro_container span {
+  display: flex;
+}
+body #Intro .typing {
+  opacity: 1;
+  animation: typing 10s steps(20), blink 0.5s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 100ch;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+body #About {
+  width: 100%;
+  height: 100vh;
+}
+body #About .about_container {
+  padding: 0 240px;
+}
+body #About .about_container .about_frist_text h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 100px;
+  margin-top: 40px;
+}
+body #About .about_container .about_frist_text svg path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  transition: stroke-dashoffset 10s ease-out;
+}
+body #About .about_container .about_frist_text svg.animate path {
+  stroke-dashoffset: 0;
+}
+body #About .about_container .info_containers {
+  display: flex;
+  gap: 230px;
+}
+body #About .about_container .info_containers .about_img_text {
+  width: 270px;
+  height: 464px;
+  text-align: center;
+}
+body #About .about_container .info_containers .about_img_text img {
+  width: 240px;
+  height: 240px;
+  margin-top: 209px;
+}
+body #About .about_container .info_containers .about_img_text h1 {
+  font-size: 24px;
+  font-family: "Pretendard-Regular";
+  margin-bottom: 24px;
+}
+body #About .about_container .info_containers .about_img_text p {
+  font-family: "Pretendard-Regular";
+  font-size: 20px;
+}
+body #About .about_container .info_containers .about_info_text {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+body #About .about_container .info_containers .about_info_text .info_container {
+  width: 821px;
+  height: 136px;
+  display: flex;
+  gap: 92px;
+}
+body #About .about_container .info_containers .about_info_text .info_container h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  line-height: 1;
+}
+body #About .about_container .info_containers .about_info_text .info_container .p_df1 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body #About .about_container .info_containers .about_info_text .info_container .p_df1 p {
+  font-family: "Pretendard-Regular";
+  font-size: 24px;
+  margin: 0;
+}
+body #About .about_container .info_containers .about_info_text .skill_container {
+  width: 821px;
+  height: 50px;
+  display: flex;
+  gap: 260px;
+}
+body #About .about_container .info_containers .about_info_text .skill_container h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 40px;
+}
+body #About .about_container .info_containers .about_info_text .skill_container .skill_icon {
+  width: 456px;
+  height: 50px;
+  display: flex;
+  gap: 8px;
+}
+body #About .about_container .info_containers .about_info_text .skill_container .skill_icon span,
+body #About .about_container .info_containers .about_info_text .skill_container .skill_icon i {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  transition: all 0.3s;
+}
+body #About .about_container .info_containers .about_info_text .skill_container .skill_icon span:hover,
+body #About .about_container .info_containers .about_info_text .skill_container .skill_icon i:hover {
+  background-color: #000;
+  color: #fff;
+}
+body #About .about_container .info_containers .about_info_text .license_container {
+  display: flex;
+  gap: 211px;
+}
+body #About .about_container .info_containers .about_info_text .license_container h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 40px;
+  line-height: 1;
+}
+body #About .about_container .info_containers .about_info_text .license_container .p_df2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body #About .about_container .info_containers .about_info_text .license_container .p_df2 p {
+  font-family: "Pretendard-Regular";
+  font-size: 24px;
+}
+body #About .about_container .info_containers .about_info_text .education_container {
+  display: flex;
+  gap: 132px;
+}
+body #About .about_container .info_containers .about_info_text .education_container h1 {
+  width: 233px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 40px;
+  line-height: 1;
+}
+body #About .about_container .info_containers .about_info_text .education_container .education_containers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_1,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_2,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_3,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_4,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_5,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_6,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_7 {
+  display: flex;
+  gap: 16px;
+}
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_1 p,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_2 p,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_3 p,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_4 p,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_5 p,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_6 p,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_7 p {
+  width: 100px;
+  font-family: "Pretendard-Regular";
+  font-size: 24px;
+  text-align: center;
+}
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_1 span,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_2 span,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_3 span,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_4 span,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_5 span,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_6 span,
+body #About .about_container .info_containers .about_info_text .education_container .education_containers .text_7 span {
+  font-family: "Pretendard-Regular";
+  font-size: 24px;
+}
+body #Project {
+  width: 100%;
+  margin-bottom: 64px;
+  padding: 0 240px;
+}
+body #Project h1 {
+  font-family: sans-serif;
+  font-size: 100px;
+  margin-top: 40px;
+}
+body #Project svg {
+  margin-bottom: 100px;
+}
+body #Project .video_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+body #Project .video_container .video_box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+body #Project .video_container .video_box1 .oliveyoung p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box1 .oliveyoung p:nth-child(3) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+body #Project .video_container .video_box1 .kakaostory p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box1 .kakaostory p:nth-child(3) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+body #Project .video_container .video_box1 .olive,
+body #Project .video_container .video_box1 .kakao {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+body #Project .video_container .video_box2 .padoott p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box2 .padoott p:nth-child(3) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+body #Project .video_container .video_box2 .portfolios p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box2 .portfolios p:nth-child(3) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+body #Project .video_container .video_box2 .pado,
+body #Project .video_container .video_box2 .my {
+  width: 100%;
+}
+body #Project .video_container .video_box3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+body #Project .video_container .video_box3 .Seoulbearfestival p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box3 .Seoulbearfestival p:nth-child(3) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+body #Project .video_container .video_box3 .gobos p:nth-child(2) {
+  font-family: "Exo 2", sans-serif;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+body #Project .video_container .video_box3 .gobos p:nth-child(3) {
+  font-family: "Pretendard-Regular";
+  font-size: 16px;
+  color: #333;
+}
+body #Project .video_container .video_box3 .sbf,
+body #Project .video_container .video_box3 .gobo {
+  width: 100%;
+}
+body #Contact {
+  padding: 0 240px;
+  width: 100%;
+  margin-bottom: 40px;
+  border-top: 1px solid #999;
+}
+body #Contact h1 {
+  font-size: 100px;
+  font-family: "Exo 2", sans-serif;
+  margin-bottom: 64px;
+}
+body #Contact .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 122px;
+}
+body #Contact .container .input_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+body #Contact .container .input_box input {
+  width: 588px;
+  height: 69px;
+  margin-bottom: 26px;
+  padding: 20px 20px;
+}
+body #Contact .container .input_box textarea {
+  width: 588px;
+  height: 300px;
+  margin-bottom: 16px;
+  padding: 20px 20px;
+}
+body #Contact .container .input_box button {
+  width: 588px;
+  height: 49px;
+  border-radius: 50px;
+  background-color: #fff;
+}
+body #Contact .container .icon_box {
+  display: flex;
+  flex-direction: column;
+}
+body #Contact .container .icon_box h1 {
+  font-size: 40px;
+  font-family: "Exo 2", sans-serif;
+  margin-bottom: 36px;
+  text-align: center;
+}
+body #Contact .container .icon_box .p1 {
+  font-size: 24px;
+  font-family: "Pretendard-Regular";
+  margin-bottom: 40px;
+  text-align: center;
+}
+body #Contact .container .icon_box .icon {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+body #Contact .container .icon_box .icon .icon_github,
+body #Contact .container .icon_box .icon .icon_instagram,
+body #Contact .container .icon_box .icon .icon_facebook {
+  width: 155px;
+  height: 69px;
+  display: flex;
+  gap: 15px;
+}
+body #Contact .container .icon_box .icon .icon_github i,
+body #Contact .container .icon_box .icon .icon_instagram i,
+body #Contact .container .icon_box .icon .icon_facebook i {
+  font-size: 24px;
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #Contact .container .icon_box .icon .icon_github .icon_text,
+body #Contact .container .icon_box .icon .icon_instagram .icon_text,
+body #Contact .container .icon_box .icon .icon_facebook .icon_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+body #Contact .container .icon_box .icon .icon_github .icon_text h2,
+body #Contact .container .icon_box .icon .icon_instagram .icon_text h2,
+body #Contact .container .icon_box .icon .icon_facebook .icon_text h2 {
+  font-size: 16px;
+  font-family: "Pretendard-Regular";
+  font-weight: bold;
+}
+body #Contact .container .icon_box .icon .icon_github .icon_text p,
+body #Contact .container .icon_box .icon .icon_instagram .icon_text p,
+body #Contact .container .icon_box .icon .icon_facebook .icon_text p {
+  font-size: 16px;
+  font-family: "Pretendard-Regular";
+  font-weight: 500;
 }/*# sourceMappingURL=index.css.map */
