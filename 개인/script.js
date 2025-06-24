@@ -1,45 +1,59 @@
-// 헤더
+// 앵커 스크롤 이동
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
-    const target = document.querySelector(this.getAttribute("href"));
+    const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       window.scrollTo({
-        top: target.offsetTop - 60, // 헤더 높이만큼 보정
-        behavior: "smooth",
+        top: target.offsetTop - 60, // 헤더 높이 보정
+        behavior: 'smooth',
       });
     }
   });
 });
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > 10) {
-    header.classList.add("scrolled");
+// 햄버거 메뉴 toggle
+const nav = document.querySelector('.nav');
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  hamburger.classList.toggle('open'); // ✅ ✕ 애니메이션용 클래스
+});
+
+// ✅ 헤더 + 메뉴에 .scrolled 클래스 toggle
+const header = document.querySelector('header');
+const menu = document.querySelector('.nav ul'); // ← 슬라이드 메뉴 ul
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
+    menu.classList.add('scrolled'); // ✅ 메뉴에도 blur 효과 적용
   } else {
-    header.classList.remove("scrolled");
+    header.classList.remove('scrolled');
+    menu.classList.remove('scrolled');
   }
 });
 
 // 커서 마우스
-const cursor = document.querySelector(".custom-cursor");
-const hoverTargets = document.querySelectorAll(".hover-target");
+const cursor = document.querySelector('.custom-cursor');
+const hoverTargets = document.querySelectorAll('.hover-target');
 
-document.addEventListener("mousemove", (e) => {
+document.addEventListener('mousemove', (e) => {
   cursor.style.top = `${e.clientY}px`;
   cursor.style.left = `${e.clientX}px`;
 });
 
 hoverTargets.forEach((target) => {
-  target.addEventListener("mouseenter", () => {
-    cursor.classList.add("hovered"); // ✅ 원 작아지게
-    cursor.textContent = "click"; // ✅ 텍스트 변경
+  target.addEventListener('mouseenter', () => {
+    cursor.classList.add('hovered'); // ✅ 원 작아지게
+    cursor.textContent = 'click'; // ✅ 텍스트 변경
   });
 
-  target.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hovered"); // ✅ 원 원래대로
-    cursor.textContent = "cursor"; // ✅ 텍스트 원래대로
+  target.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hovered'); // ✅ 원 원래대로
+    cursor.textContent = 'cursor'; // ✅ 텍스트 원래대로
   });
 });
 
@@ -51,7 +65,7 @@ let typingInterval = null;
 const typing = async (element, delay = 50) => {
   const text = element.dataset.original || element.textContent;
   element.dataset.original = text;
-  element.textContent = "";
+  element.textContent = '';
   element.style.opacity = 1;
 
   for (let i = 0; i < text.length; i++) {
@@ -63,7 +77,7 @@ const typing = async (element, delay = 50) => {
 
 const resetElements = () => {
   const allEls = document.querySelectorAll(
-    ".span_first span, .span_second, .p_first p"
+    '.span_first span, .span_second, .p_first p'
   );
   allEls.forEach((el) => {
     const text = el.dataset.original || el.textContent;
@@ -78,9 +92,9 @@ const runTypingSequence = async () => {
   isCanceled = false;
   isTyping = true;
 
-  const spanFirst = document.querySelectorAll(".span_first span");
-  const spanSecond = document.querySelector(".span_second");
-  const pFirst = document.querySelectorAll(".p_first p");
+  const spanFirst = document.querySelectorAll('.span_first span');
+  const spanSecond = document.querySelector('.span_second');
+  const pFirst = document.querySelectorAll('.p_first p');
 
   resetElements();
 
@@ -138,42 +152,94 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-window.addEventListener("DOMContentLoaded", () => {
-  const intro = document.querySelector("#Intro");
+window.addEventListener('DOMContentLoaded', () => {
+  const intro = document.querySelector('#Intro');
   observer.observe(intro);
 });
 
 // svg
-window.addEventListener("scroll", () => {
-  const aboutSection = document.getElementById("About");
-  const svgElement = aboutSection.querySelector("svg");
-  const rect = aboutSection.getBoundingClientRect();
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
+window.addEventListener('scroll', () => {
+  // 처리할 섹션 아이디 리스트
+  const sections = ['About', 'Project'];
 
-  // about 섹션 높이
-  const aboutHeight = rect.height;
+  sections.forEach((id) => {
+    const section = document.getElementById(id);
+    if (!section) return;
 
-  // 화면에 보이는 부분 높이 계산
-  const visibleHeight =
-    Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const svgElement = section.querySelector('svg');
+    if (!svgElement) return;
 
-  // 보이는 비율 (0 이상 1 이하)
-  const visibleRatio = visibleHeight > 0 ? visibleHeight / aboutHeight : 0;
+    const rect = section.getBoundingClientRect();
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
 
-  // 30% 이상 보이면 애니메이션 실행, 아니면 제거
-  if (visibleRatio >= 0.4) {
-    svgElement.classList.add("animate");
+    const sectionHeight = rect.height;
+    const visibleHeight =
+      Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+    const visibleRatio = visibleHeight > 0 ? visibleHeight / sectionHeight : 0;
+
+    if (visibleRatio >= 0.4) {
+      svgElement.classList.add('animate');
+    } else {
+      svgElement.classList.remove('animate');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const wrappers = document.querySelectorAll('.video-wrapper');
+
+  wrappers.forEach((wrapper) => {
+    const video = wrapper.querySelector('video');
+    const thumbnail = wrapper.querySelector('.thumbnail');
+
+    wrapper.addEventListener('mouseenter', () => {
+      thumbnail.style.opacity = '0';
+      video.style.opacity = '1';
+      video.play();
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      thumbnail.style.opacity = '1';
+      video.style.opacity = '0';
+      video.pause(); // 현재 시점에서 정지
+    });
+  });
+});
+
+// contant
+document
+  .getElementById('contact-form')
+  .addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_az3014', 'template_y3f58g9', this).then(
+      function () {
+        alert('메시지가 성공적으로 전송되었습니다!');
+        document.getElementById('contact-form').reset(); // 입력 초기화
+      },
+      function (error) {
+        alert('전송 실패! 오류: ' + JSON.stringify(error));
+      }
+    );
+  });
+
+// 사이드 탑 버튼
+const goToBtn = document.getElementById('goToBtn');
+
+// 스크롤 시 버튼 보이기/숨기기
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    goToBtn.classList.add('active');
   } else {
-    svgElement.classList.remove("animate");
+    goToBtn.classList.remove('active');
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const videos = document.querySelectorAll(".hover-video");
-
-  videos.forEach((video) => {
-    video.addEventListener("mouseenter", () => video.play());
-    video.addEventListener("mouseleave", () => video.pause());
+// 클릭 시 스크롤 맨 위로 부드럽게 이동
+goToBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
   });
 });

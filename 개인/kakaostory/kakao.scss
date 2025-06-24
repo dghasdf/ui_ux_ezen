@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
-  font-family: "Cafe24ClassicType-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2")
-    format("woff2");
+  font-family: 'Cafe24ClassicType-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2')
+    format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
-$font-family-exo: "Exo 2", sans-serif;
-$font-family-cafe24: "Cafe24ClassicType-Regular";
-$font-family-pertendard: "Pretendard-Regular";
+$font-family-exo: 'Exo 2', sans-serif;
+$font-family-cafe24: 'Cafe24ClassicType-Regular';
+$font-family-pertendard: 'Pretendard-Regular';
 $main-color: #ff6d70;
 $sub-color: #27db95;
 $color-gray3: #333;
@@ -44,7 +44,7 @@ a {
 body {
   width: 100%;
   height: 100vh;
-  background-image: url(../image/p6.webp);
+  background-image: url(/image/p6.webp);
 
   .custom-cursor {
     position: fixed;
@@ -115,6 +115,34 @@ body {
           }
         }
       }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: none;
+        gap: 5px;
+        position: relative; /* 위치 지정 */
+        z-index: 1000;
+
+        span {
+          display: block;
+          width: 30px;
+          height: 3px;
+          background-color: #333;
+          border-radius: 2px;
+          transition: 0.3s ease;
+        }
+        &.open {
+          span:nth-child(1) {
+            transform: rotate(45deg) translate(5.5px, 5.5px);
+          }
+          span:nth-child(2) {
+            opacity: 0;
+          }
+          span:nth-child(3) {
+            transform: rotate(-45deg) translate(5.5px, -5.5px);
+          }
+        }
+      }
     }
   }
   a {
@@ -138,18 +166,10 @@ body {
     }
     .text_box {
       padding: 40px 0;
-      transition: all 0.3s;
-      &:hover {
-        background-color: $sub-color;
-        border-radius: 30px;
-        color: #fff;
-        span {
-          color: $main-color;
-        }
-      }
       p {
         font-size: 24px;
         font-family: $font-family-pertendard;
+        margin-bottom: 8px;
       }
       span {
         color: $sub-color;
@@ -165,21 +185,13 @@ body {
     }
     .text_container {
       padding: 40px 0;
-      transition: all 0.3s;
-      &:hover {
-        background-color: $sub-color;
-        border-radius: 30px;
-        color: #fff;
-        span {
-          color: $main-color;
-        }
-      }
       .text1,
       .text2,
       .text3,
       .text4,
       .text5,
-      .text6 {
+      .text6,
+      .text7 {
         display: flex;
         align-items: center;
         gap: 32px;
@@ -193,6 +205,7 @@ body {
           font-family: $font-family-pertendard;
         }
         p {
+          width: 500px;
           font-size: 24px;
           font-family: $font-family-pertendard;
         }
@@ -209,19 +222,11 @@ body {
     }
     .problem_container {
       padding: 40px 0;
-      transition: all 0.3s;
-      &:hover {
-        background-color: $sub-color;
-        border-radius: 30px;
-        color: #fff;
-        span {
-          color: $main-color;
-        }
-      }
 
       p {
         font-size: 24px;
         font-family: $font-family-pertendard;
+        margin-bottom: 16px;
       }
       span {
         color: $sub-color;
@@ -241,6 +246,996 @@ body {
         display: flex;
         flex-direction: column;
         gap: 8px;
+      }
+    }
+  }
+  #goToBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #999;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    opacity: 0;
+    transform: translateY(20px); // 아래에서 올라오듯
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease; // 여기 핵심!
+
+    &.active {
+      opacity: 1;
+      transform: translateY(0); // 원래 위치로
+      pointer-events: auto;
+    }
+
+    &:hover {
+      // bottom: 70px;
+      background-color: $sub-color;
+      transition: all 0.5s;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    header {
+      width: 100%;
+      position: fixed;
+      background: none;
+      background-color: #fff;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+
+      &.scrolled {
+        background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+        backdrop-filter: blur(8px); // 선택사항: 흐림 효과
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+      }
+      .nav {
+        padding: 0 180px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        .logo {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 50px;
+          font-family: $font-family-cafe24;
+
+          li {
+            font-size: 20px;
+            transition: 0.3s;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+    a {
+      cursor: none;
+    }
+    i {
+      padding-top: 120px;
+      margin: 0 180px;
+      font-size: 40px;
+      color: $main-color;
+      cursor: none;
+    }
+    .kakako {
+      padding-top: 40px;
+      margin: 0 180px;
+
+      h1 {
+        font-size: 40px;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .text_box {
+        padding: 40px 0;
+        transition: all 0.3s;
+        p {
+          font-size: 24px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 8px;
+        }
+        span {
+          color: $sub-color;
+        }
+      }
+    }
+    .info_link {
+      margin: 64px 180px;
+      h1 {
+        font-size: 40px;
+        margin-bottom: 32px;
+        font-family: $font-family-exo;
+      }
+      .text_container {
+        padding: 40px 0;
+        .text1,
+        .text2,
+        .text3,
+        .text4,
+        .text5,
+        .text6,
+        .text7 {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          margin-bottom: 16px;
+
+          h6 {
+            font-size: 20px;
+            font-weight: bold;
+            width: 200px;
+
+            font-family: $font-family-pertendard;
+          }
+          p {
+            font-size: 20px;
+            font-family: $font-family-pertendard;
+          }
+        }
+      }
+    }
+    .problem {
+      margin: 64px 180px;
+      h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .problem_container {
+        padding: 40px 0;
+
+        p {
+          font-size: 24px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 16px;
+        }
+        span {
+          color: $sub-color;
+          font-family: $font-family-pertendard;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      border-top: 1px solid #999;
+      .footer_container {
+        margin: 40px 180px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .footer_text1 {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  body {
+    header {
+      width: 100%;
+      position: fixed;
+      background: none;
+      background-color: #fff;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+
+      &.scrolled {
+        background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+        backdrop-filter: blur(8px); // 선택사항: 흐림 효과
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+      }
+      .nav {
+        padding: 0 160px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        .logo {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 50px;
+          font-family: $font-family-cafe24;
+
+          li {
+            font-size: 20px;
+            transition: 0.3s;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+    a {
+      cursor: none;
+    }
+    i {
+      padding-top: 120px;
+      margin: 0 160px;
+      font-size: 40px;
+      color: $main-color;
+      cursor: none;
+    }
+    .kakako {
+      padding-top: 35px;
+      margin: 0 160px;
+
+      h1 {
+        font-size: 35px;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .text_box {
+        padding: 35px 0;
+        transition: all 0.3s;
+        p {
+          font-size: 20px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 8px;
+        }
+        span {
+          color: $sub-color;
+        }
+      }
+    }
+    .info_link {
+      margin: 64px 160px;
+      h1 {
+        font-size: 35px;
+        margin-bottom: 32px;
+        font-family: $font-family-exo;
+      }
+      .text_container {
+        padding: 40px 0;
+        .text1,
+        .text2,
+        .text3,
+        .text4,
+        .text5,
+        .text6 {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          margin-bottom: 16px;
+
+          h6 {
+            font-size: 20px;
+            font-weight: bold;
+            width: 200px;
+
+            font-family: $font-family-pertendard;
+          }
+          p {
+            font-size: 20px;
+            font-family: $font-family-pertendard;
+          }
+        }
+      }
+    }
+    .problem {
+      margin: 64px 160px;
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .problem_container {
+        padding: 35px 0;
+
+        p {
+          font-size: 20px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 16px;
+        }
+        span {
+          color: $sub-color;
+          font-family: $font-family-pertendard;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      border-top: 1px solid #999;
+      .footer_container {
+        margin: 35px 160px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .footer_text1 {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    .custom-cursor {
+      display: none;
+      position: fixed;
+      text-align: center;
+      line-height: 60px;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #000;
+      font-size: 12px;
+      border-radius: 50%;
+      pointer-events: none; // 클릭 막지 않기
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+      z-index: 100000;
+      font-family: $font-family-pertendard;
+      font-weight: bold;
+      &.hovered {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: $main-color;
+        border: 1px solid $main-color;
+        font-family: $font-family-pertendard;
+        font-weight: bold;
+      }
+    }
+    header {
+      width: 100%;
+      position: fixed;
+      background: none;
+      background-color: #fff;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+      &.scrolled {
+        background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+        backdrop-filter: blur(px); // 선택사항: 흐림 효과
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+      }
+      .nav {
+        padding: 0 128px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #efefef;
+        .logo {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        ul {
+          background-color: #fff;
+          // display: none;
+          position: absolute;
+          top: 0px;
+          right: 0;
+          flex-direction: column;
+          width: 100%;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+          padding-bottom: 10px;
+          font-family: $font-family-cafe24;
+          gap: 10px;
+          opacity: 0;
+          transition: background-color 0.3s ease;
+          color: #000;
+          &.scrolled {
+            background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+
+            backdrop-filter: blur(8px); // 선택사항: 흐림 효과
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+          }
+
+          li {
+            text-align: center;
+            font-size: 16px;
+            transition: 0.3s;
+            padding: 10px 10px;
+            border-bottom: 1px solid #999;
+            &:hover {
+              color: $main-color;
+              transform: scale(1.2);
+            }
+          }
+        }
+        &.active ul {
+          max-height: 500px; /* 메뉴 높이에 맞게 충분히 크게 */
+          opacity: 1;
+        }
+        .hamburger {
+          display: flex;
+          margin-top: 20px;
+        }
+        &.active ul {
+          display: flex;
+        }
+      }
+    }
+    a {
+      cursor: none;
+    }
+    i {
+      padding-top: 120px;
+      margin: 0 128px;
+      font-size: 40px;
+      color: $main-color;
+      cursor: none;
+    }
+    .kakako {
+      padding-top: 30px;
+      margin: 0 128px;
+
+      h1 {
+        font-size: 30px;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .text_box {
+        padding: 30px 0;
+        transition: all 0.3s;
+        p {
+          font-size: 20px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 8px;
+        }
+        span {
+          color: $sub-color;
+        }
+      }
+    }
+    .info_link {
+      margin: 64px 128px;
+      h1 {
+        font-size: 30px;
+        margin-bottom: 32px;
+        font-family: $font-family-exo;
+      }
+      .text_container {
+        padding: 30px 0;
+        .text1,
+        .text2,
+        .text3,
+        .text4,
+        .text5,
+        .text6,
+        .text7 {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          margin-bottom: 16px;
+
+          h6 {
+            font-size: 18px;
+            font-weight: bold;
+            width: 200px;
+
+            font-family: $font-family-pertendard;
+          }
+          p {
+            font-size: 18px;
+            font-family: $font-family-pertendard;
+          }
+        }
+      }
+    }
+    .problem {
+      margin: 64px 128px;
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .problem_container {
+        padding: 30px 0;
+
+        p {
+          font-size: 20px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 16px;
+        }
+        span {
+          color: $sub-color;
+          font-family: $font-family-pertendard;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      border-top: 1px solid #999;
+      .footer_container {
+        margin: 30px 128px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .footer_text1 {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    .custom-cursor {
+      // display: none;
+      position: fixed;
+      text-align: center;
+      line-height: 60px;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #000;
+      font-size: 12px;
+      border-radius: 50%;
+      pointer-events: none; // 클릭 막지 않기
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+      z-index: 100000;
+      font-family: $font-family-pertendard;
+      font-weight: bold;
+      &.hovered {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: $main-color;
+        border: 1px solid $main-color;
+        font-family: $font-family-pertendard;
+        font-weight: bold;
+      }
+    }
+    header {
+      width: 100%;
+      position: fixed;
+      background: none;
+      background-color: #fff;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+      &.scrolled {
+        background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+        backdrop-filter: blur(px); // 선택사항: 흐림 효과
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+      }
+      .nav {
+        padding: 0 96px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #efefef;
+        .logo {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        ul {
+          background-color: #fff;
+          // display: none;
+          position: absolute;
+          top: 0px;
+          right: 0;
+          flex-direction: column;
+          width: 100%;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+          padding-bottom: 10px;
+          font-family: $font-family-cafe24;
+          gap: 10px;
+          opacity: 0;
+          transition: background-color 0.3s ease;
+          color: #000;
+          &.scrolled {
+            background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+
+            backdrop-filter: blur(8px); // 선택사항: 흐림 효과
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+          }
+
+          li {
+            text-align: center;
+            font-size: 16px;
+            transition: 0.3s;
+            padding: 10px 10px;
+            border-bottom: 1px solid #999;
+            &:hover {
+              color: $main-color;
+              transform: scale(1.2);
+            }
+          }
+        }
+        &.active ul {
+          max-height: 500px; /* 메뉴 높이에 맞게 충분히 크게 */
+          opacity: 1;
+        }
+        .hamburger {
+          display: flex;
+          margin-top: 20px;
+        }
+        &.active ul {
+          display: flex;
+        }
+      }
+    }
+    a {
+      cursor: none;
+    }
+    i {
+      padding-top: 120px;
+      margin: 0 96px;
+      font-size: 40px;
+      color: $main-color;
+      cursor: none;
+    }
+    .kakako {
+      padding-top: 30px;
+      margin: 0 96px;
+
+      h1 {
+        font-size: 25px;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .text_box {
+        padding: 30px 0;
+        transition: all 0.3s;
+        p {
+          font-size: 18px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 8px;
+        }
+        span {
+          color: $sub-color;
+        }
+      }
+    }
+    .info_link {
+      margin: 64px 96px;
+      h1 {
+        font-size: 25px;
+        margin-bottom: 32px;
+        font-family: $font-family-exo;
+      }
+      .text_container {
+        padding: 30px 0;
+        .text1,
+        .text2,
+        .text3,
+        .text4,
+        .text5,
+        .text6,
+        .text7 {
+          display: flex;
+          align-items: center;
+          gap: 0px;
+          margin-bottom: 16px;
+
+          h6 {
+            font-size: 14px;
+            font-weight: bold;
+            width: 100px;
+
+            font-family: $font-family-pertendard;
+          }
+          p {
+            width: 200px;
+            font-size: 14px;
+            font-family: $font-family-pertendard;
+          }
+        }
+      }
+    }
+    .problem {
+      margin: 64px 96px;
+      h1 {
+        font-size: 25px;
+        font-weight: bold;
+        font-family: $font-family-exo;
+        margin-bottom: 32px;
+      }
+      .problem_container {
+        padding: 30px 0;
+
+        p {
+          font-size: 18px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 16px;
+        }
+        span {
+          color: $sub-color;
+          font-family: $font-family-pertendard;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      border-top: 1px solid #999;
+      .footer_container {
+        margin: 30px 128px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .footer_text1 {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  body {
+    .custom-cursor {
+      display: none;
+      position: fixed;
+      text-align: center;
+      line-height: 60px;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #000;
+      font-size: 12px;
+      border-radius: 50%;
+      pointer-events: none; // 클릭 막지 않기
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+      z-index: 100000;
+      font-family: $font-family-pertendard;
+      font-weight: bold;
+      &.hovered {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: $main-color;
+        border: 1px solid $main-color;
+        font-family: $font-family-pertendard;
+        font-weight: bold;
+      }
+    }
+    header {
+      width: 100%;
+      position: fixed;
+      background: none;
+      background-color: #fff;
+      z-index: 999;
+      transition: background-color 0.3s ease;
+      &.scrolled {
+        background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+        backdrop-filter: blur(px); // 선택사항: 흐림 효과
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+      }
+      .nav {
+        padding: 0 36px;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #efefef;
+        .logo {
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        ul {
+          background-color: #fff;
+          // display: none;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          flex-direction: column;
+          width: 100%;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+          padding-bottom: 10px;
+          font-family: $font-family-cafe24;
+          gap: 10px;
+          opacity: 0;
+          transition: background-color 0.3s ease;
+          color: #000;
+          &.scrolled {
+            background-color: rgba(255, 255, 255, 0.8); // 반투명 효과
+
+            backdrop-filter: blur(8px); // 선택사항: 흐림 효과
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // 약간의 그림자
+          }
+
+          li {
+            text-align: center;
+            font-size: 12px;
+            transition: 0.3s;
+            padding: 5px 5px;
+            border-bottom: 1px solid #999;
+            &:hover {
+              color: $main-color;
+              transform: scale(1.2);
+            }
+          }
+        }
+        &.active ul {
+          max-height: 400px; /* 메뉴 높이에 맞게 충분히 크게 */
+          opacity: 1;
+        }
+        .hamburger {
+          display: flex;
+          margin-top: 20px;
+        }
+        &.active ul {
+          display: flex;
+        }
+      }
+    }
+    a {
+      cursor: none;
+    }
+    i {
+      padding-top: 120px;
+      margin: 0 36px;
+      font-size: 40px;
+      color: $main-color;
+      cursor: none;
+    }
+    .kakako {
+      padding-top: 30px;
+      margin: 0 36px;
+
+      h1 {
+        font-size: 20px;
+        font-family: $font-family-exo;
+        margin-bottom: 16px;
+      }
+      .text_box {
+        padding: 15px 0;
+        transition: all 0.3s;
+        p {
+          font-size: 15px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 8px;
+        }
+        span {
+          color: $sub-color;
+        }
+      }
+    }
+    .info_link {
+      text-align: center;
+      margin: 32px 36px;
+      padding: 0 36px;
+      overflow: hidden;
+      h1 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        font-family: $font-family-exo;
+        text-align: center;
+      }
+      .text_container {
+        padding: 15px 0;
+        .text1,
+        .text2,
+        .text3,
+        .text4,
+        .text5,
+        .text6,
+        .text7 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 16px;
+
+          h6 {
+            font-size: 20px;
+            font-weight: bold;
+            width: 100px;
+
+            font-family: $font-family-pertendard;
+          }
+          p {
+            width: 100%;
+            font-size: 12px;
+            font-family: $font-family-pertendard;
+          }
+          P:nth-child(1) {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+    .problem {
+      margin: 32px 36px;
+      h1 {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $font-family-exo;
+        margin-bottom: 16px;
+      }
+      .problem_container {
+        padding: 15px 0;
+
+        p {
+          font-size: 15px;
+          font-family: $font-family-pertendard;
+          margin-bottom: 16px;
+        }
+        span {
+          color: $sub-color;
+          font-family: $font-family-pertendard;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      border-top: 1px solid #999;
+      .footer_container {
+        margin: 15px 36px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .footer_text1 {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          p {
+            font-size: 11px;
+          }
+        }
+        p {
+          font-size: 11px;
+        }
       }
     }
   }

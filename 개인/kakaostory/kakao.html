@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./kakao.css" />
     <script defer src="./kakao.js"></script>
   </head>
+
   <body>
     <div class="custom-cursor">cursor</div>
     <header>
@@ -19,6 +20,11 @@
           <a href="../index.html#main"
             ><img src="../image/logo.png" class="hover-target" alt="logo"
           /></a>
+        </div>
+        <div class="hamburger hover-target">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <ul>
           <li class="hover-target"><a href="../index.html#Intro">Intro</a></li>
@@ -65,11 +71,11 @@
         </div>
         <div class="text2">
           <h6>주요 기능</h6>
-          <p>CRUD, 다크 모드/라이트 모드 지원, 카카오 소셜 로그인</p>
+          <p>CRUD, 다크 모드, 카카오 소셜 로그인</p>
         </div>
         <div class="text3">
           <h6>주요 기술</h6>
-          <p>React, Fire base, Styled components, React Router,Framer motion</p>
+          <p>React, Fire base, Styledcomponents, React Router,Framer motion</p>
         </div>
         <div class="text4">
           <h6>기여도</h6>
@@ -77,30 +83,38 @@
         </div>
         <div class="text5">
           <h6>깃허브</h6>
-          <a href="https://github.com/ryryryowen/KakaoStory"
-            ><p class="hover-target">
-              https://github.com/ryryryowen/KakaoStory
-            </p></a
-          >
+          <a href="https://github.com/ryryryowen/KakaoStory">
+            <p class="hover-target">https://github.com/ryryryowen/KakaoStory</p>
+          </a>
         </div>
         <div class="text6">
           <h6>배포주소</h6>
-          <a href="https://kakaostory-b8662.web.app/"
-            ><p class="hover-target">https://kakaostory-b8662.web.app/</p></a
+          <a href="https://kakaostory-b8662.web.app/">
+            <p class="hover-target">https://kakaostory-b8662.web.app/</p>
+          </a>
+        </div>
+        <div class="text7">
+          <h6>피그마 주소</h6>
+          <a
+            href="https://www.figma.com/design/9DP3WNet1AAiLPRh9OvegH/KakaoStory?node-id=710-27&p=f&t=W2TjGHzRR0mUdyMs-0"
           >
+            <p class="hover-target">
+              https://www.figma.com/design/9DP3WNet1AAiLPRh9OvegH/KakaoStory?node-id=710-27&p=f&t=W2TjGHzRR0mUdyMs-0
+            </p>
+          </a>
         </div>
       </div>
     </div>
     <div class="problem">
-      <h1>문제점</h1>
+      <h1>경험</h1>
       <div class="problem_container">
         <p>
           <span>Firebase 인증 시스템:</span> Firebase와 카카오 소셜 로그인을
           연동하는 방법을 학습했습니다.
         </p>
         <p>
-          <span>테마 전환 구현:</span> Context API와 Styled Components를 활용한
-          다크 모드/라이트 모드 전환 기능을 구현했습니다.
+          <span>테마 전환 구현:</span> Context API와 StyledComponents를 활용한
+          다크 모드 전환 기능을 구현했습니다.
         </p>
         <p>
           <span>비동기 데이터 처리:</span>Axios를 활용한 API 호출 및 비동기
@@ -117,5 +131,6 @@
         <p>©2025 JUN YOUNG. All Rights Reserved.</p>
       </div>
     </div>
+    <button id="goToBtn">↑</button>
   </body>
 </html>

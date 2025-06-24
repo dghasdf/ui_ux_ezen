@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>김준영 포토폴리오</title>
+    <title>김준영의 자기소개서</title>
+    <link rel="icon" href="./image/logo.png" />
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init('SPISxQpXsQJCH6J3b');
+    </script>
 
     <!-- fontawesome -->
     <script
@@ -36,6 +42,11 @@
             ><img src="./image/logo.png" class="hover-target" alt="logo"
           /></a>
         </div>
+        <div class="hamburger hover-target">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul>
           <li class="hover-target"><a href="#Intro">Intro</a></li>
           <li class="hover-target"><a href="#About">About</a></li>
@@ -50,7 +61,7 @@
           <div class="first">
             <h1 class="first_text">Portfolio</h1>
             <div class="hover_text">
-              <img src="./image/comtuter.png" alt="comtuter" />
+              <img src="./image/computer.png" alt="comtuter" />
               <div class="circle"></div>
             </div>
             <div class="span_box">
@@ -60,7 +71,7 @@
           <h1 class="second_text">Design</h1>
           <div class="second">
             <div class="hover_text2">
-              <img src="./image/sc.png" alt="sc" />
+              <img src="./image/football.png" alt="sc" />
               <div class="circle2"></div>
             </div>
             <div class="span_box2">
@@ -70,19 +81,6 @@
             <h1 class="third_text">Publisher</h1>
           </div>
           <h1 class="fourth_text">Joo Nyeng</h1>
-          <svg
-            width="735"
-            height="34"
-            viewBox="0 0 735 34"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 17.5727C11.7521 28.5893 40.195 44.0125 67.9493 17.5727C95.7037 -8.86709 122.677 4.14052 132.694 13.9493C143.068 22.8065 170.447 36.8974 196.975 22.4039C230.135 4.28692 229.579 -4.30786 262.996 13.9493C296.413 32.2065 300.179 38.9836 330.525 22.4039C360.872 5.82411 369.628 -8.55965 407.337 22.4039C437.505 47.1747 468.717 22.7699 480.552 7.47111C487.707 0.736727 508.562 -6.53934 534.738 18.2315C560.915 43.0023 591.516 28.5527 603.544 18.2315C613.987 7.65411 641.509 -7.15421 668.057 18.2315C694.605 43.6172 723.287 28.8089 734.31 18.2315"
-              stroke="#FF6D70"
-              stroke-width="2"
-            />
-          </svg>
         </div>
       </div>
     </main>
@@ -92,7 +90,7 @@
           <span>Nice to meet you</span>
           <span>I'm Kim Jun Young</span>
         </div>
-        <span class="span_second">(Hellow my world!)</span>
+        <span class="span_second">Hello My World!</span>
         <div class="p_first">
           <p>
             안녕하세요 방갑습니다! UI/UX디자이너, 퍼블리셔가 꿈인
@@ -114,28 +112,17 @@
       <div class="about_container">
         <div class="about_frist_text">
           <h1>About</h1>
-          <svg
-            width="296"
-            height="15"
-            viewBox="0 0 296 15"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1 7.24846C5.31076 11.4021 16.7141 17.2171 27.8415 7.24846C38.9688 -2.72022 49.7829 2.18408 53.799 5.88232C57.958 9.22177 68.9349 14.5345 79.5706 9.06998C92.8652 2.23928 92.6424 -1.00124 106.04 5.88232C119.437 12.7659 120.947 15.3211 133.114 9.06998C145.28 2.81885 148.791 -2.60431 163.909 9.06998C176.004 18.4094 188.518 9.20797 193.263 3.43983C196.132 0.900737 204.493 -1.84258 214.987 7.49685C225.482 16.8363 237.751 11.3883 242.573 7.49685C246.76 3.50882 257.794 -2.07441 268.438 7.49685C279.081 17.0681 291.816 11.5953 295 7.53525"
-              stroke="#FF6D70"
-              stroke-width="2"
-            />
-          </svg>
         </div>
         <div class="info_containers">
           <div class="about_img_text">
-            <img src="./image/sc.png" alt="사진" />
-            <h1>퍼블리셔 김준영입니다.</h1>
-            <p>
-              디자인과 개발은 항상 고민<br />
-              하고 진화되어야 한다고 생<br />각하고 항상 노력합니다.
-            </p>
+            <img src="./image/김준영.png" alt="사진" />
+            <div class="h1_text">
+              <h1>퍼블리셔 김준영입니다.</h1>
+              <p>
+                디자인과 개발은 항상 고민<br />
+                하고 향상되어야 한다고 <br />생각하고 항상 노력합니다.
+              </p>
+            </div>
           </div>
           <div class="about_info_text">
             <div class="info_container">
@@ -185,11 +172,11 @@
                 </div>
                 <div class="text_4">
                   <p>2024. 12</p>
-                  <span>1차 팀프로젝트 우수상</span>
+                  <span>1차 팀 프로젝트 우수상</span>
                 </div>
                 <div class="text_5">
                   <p>2024. 12</p>
-                  <span>2차 팀프로젝트 우수상</span>
+                  <span>2차 팀 프로젝트 우수상</span>
                 </div>
                 <div class="text_6">
                   <p>2025. 01</p>
@@ -197,7 +184,7 @@
                 </div>
                 <div class="text_7">
                   <p>2025. 04</p>
-                  <span>서울매력일자리 사업 참여<br />UI/UX 웹앱디자인</span>
+                  <span>서울매력일자리 사업참여<br />UI/UX웹앱디자인</span>
                 </div>
               </div>
             </div>
@@ -207,97 +194,202 @@
     </div>
     <div id="Project">
       <h1>Project</h1>
-      <svg
-        width="345"
-        height="14"
-        viewBox="0 0 345 14"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1 7.21476C6.02922 11.346 19.3331 17.1297 32.315 7.21476C45.2969 -2.70016 57.9134 2.17769 62.5989 5.85599C67.451 9.17743 80.2574 14.4615 92.6657 9.02645C108.176 2.23259 107.916 -0.990449 123.547 5.85599C139.177 12.7024 140.939 15.2439 155.133 9.02645C169.327 2.80904 173.423 -2.58487 191.061 9.02645C205.172 18.3155 219.771 9.1637 225.307 3.42667C228.654 0.901272 238.408 -1.82725 250.652 7.46181C262.896 16.7509 277.209 11.3322 282.835 7.46181C287.72 3.49529 300.593 -2.05783 313.011 7.46181C325.428 16.9814 340.285 11.5382 344 7.5"
-          stroke="#FF6D70"
-          stroke-width="2"
-        />
-      </svg>
 
       <div class="video_container">
         <div class="video_box1">
           <div class="oliveyoung">
-            <a href="/oliveyoung/olive.html"
-              ><video
-                class="olive hover-target hover-video"
-                src="./video/bandicam 2025-06-16 16-32-56-571.mp4"
-                muted
-              ></video
-            ></a>
+            <a href="/oliveyoung/olive.html">
+              <div
+                class="video-wrapper"
+                style="position: relative; display: inline-block"
+              >
+                <img
+                  class="thumbnail hover-target"
+                  src="./image/올리브영.jpg"
+                  alt="Olive Young 썸네일"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+                <video
+                  class="olive hover-target hover-video"
+                  src="./video/올리브영 온라인몰 - Chrome 2025-06-17 17-45-33.mp4"
+                  muted
+                  style="display: block; z-index: 1"
+                ></video>
+              </div>
+            </a>
             <p>Olive Young</p>
             <p>올리브영 리뉴얼</p>
           </div>
           <div class="kakaostory">
-            <a href="/kakaostory/kakao.html"
-              ><video
-                class="kakao hover-target hover-video"
-                src="./video/bandicam 2025-06-16 16-32-56-571.mp4"
-                muted
-              ></video
-            ></a>
+            <a href="/kakaostory/kakao.html">
+              <div
+                class="video-wrapper"
+                style="position: relative; display: inline-block"
+              >
+                <img
+                  class="thumbnail hover-target"
+                  src="./image/kakao.jpg"
+                  alt="Olive Young 썸네일"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+                <video
+                  class="olive hover-target hover-video"
+                  src="./video/Kakaostory - Chrome 2025-06-17 17-52-29.mp4"
+                  muted
+                  style="display: block; z-index: 1"
+                ></video>
+              </div>
+            </a>
             <p>Kakao Story</p>
             <p>카카오스토리 리뉴얼</p>
           </div>
         </div>
         <div class="video_box2">
           <div class="padoott">
-            <a href="/pado/pado.html"
-              ><video
-                class="pado hover-target hover-video"
-                src="./video/bandicam 2025-06-16 16-32-56-571.mp4"
-                autoplay
-                muted
-                loop
-              ></video
-            ></a>
+            <a href="./pado/pado.html">
+              <div
+                class="video-wrapper"
+                style="position: relative; display: inline-block"
+              >
+                <img
+                  class="thumbnail hover-target"
+                  src="./image/pado.jpg"
+                  alt="Olive Young 썸네일"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+                <video
+                  class="pado hover-target hover-video"
+                  src="./video/pado 2025-06-16 16-32-56-571.mp4"
+                  muted
+                  style="display: block; z-index: 1"
+                ></video>
+              </div>
+            </a>
             <p>pado</p>
             <p>OTT 페이지 구현</p>
           </div>
           <div class="portfolios">
-            <a href=""
-              ><video
-                class="my hover-target hover-video"
-                src="./video/bandicam 2025-06-16 16-32-56-571.mp4"
-                autoplay
-                muted
-                loop
-              ></video
-            ></a>
+            <a href="./portfolio/portfolio.html">
+              <div
+                class="video-wrapper"
+                style="position: relative; display: inline-block"
+              >
+                <img
+                  class="thumbnail hover-target"
+                  src="./image/portfolio.jpg"
+                  alt="Olive Young 썸네일"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+                <video
+                  class="my hover-target hover-video"
+                  src="./video/portfolio 2025-06-24 19-11-59-376.mp4"
+                  muted
+                  style="display: block; z-index: 1"
+                ></video>
+              </div>
+            </a>
             <p>Portfolio</p>
             <p>김준영의 포토폴리오</p>
           </div>
         </div>
         <div class="video_box3">
           <div class="Seoulbearfestival">
-            <a href=""
-              ><video
-                class="sbf hover-target hover-video"
-                src="./video/bandicam 2025-06-16 16-32-56-571.mp4"
-                autoplay
-                muted
-                loop
-              ></video
-            ></a>
+            <a href="./sbf/sbf.html">
+              <div
+                class="video-wrapper"
+                style="position: relative; display: inline-block"
+              >
+                <img
+                  class="thumbnail hover-target"
+                  src="./image/sbf.jpg"
+                  alt="Olive Young 썸네일"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+                <video
+                  class="sbf hover-target hover-video"
+                  src="./video/Seoul Beer Festival - Chrome 2025-06-17 18-01-23.mp4"
+                  muted
+                  style="display: block; z-index: 1"
+                ></video>
+              </div>
+            </a>
             <p>Seoul bear festival</p>
             <p>페스티벌 홍보 사이트</p>
           </div>
           <div class="gobos">
-            <a href=""
-              ><video
-                class="gobo hover-target hover-video"
-                src="./video/bandicam 2025-06-16 16-32-56-571.mp4"
-                autoplay
-                muted
-                loop
-              ></video
-            ></a>
+            <a href="./gubo/gubo.html">
+              <div
+                class="video-wrapper"
+                style="position: relative; display: inline-block"
+              >
+                <img
+                  class="thumbnail hover-target"
+                  src="./image/gubo.jpg"
+                  alt="Olive Young 썸네일"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 101%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    transition: opacity 0.5s ease;
+                  "
+                />
+                <video
+                  class="gobo hover-target hover-video"
+                  src="./video/매력일자리 uxui 팀프로젝트1 - 플로우 차트 - Chrome 2025-06-17 18-19-42.mp4"
+                  muted
+                  style="display: block; z-index: 1"
+                ></video>
+              </div>
+            </a>
             <p>교보도서관 리뉴얼</p>
             <p>모바일 어플 리뉴얼</p>
           </div>
@@ -307,44 +399,51 @@
     <div id="Contact">
       <h1>Contact</h1>
       <div class="container">
-        <div class="input_box">
-          <input type="text" name="name" id="name" placeholder="Name" />
-          <input type="text" name="name" id="name" placeholder="Email" />
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Message"
-          ></textarea>
-          <button tpye="submit">send Message</button>
-        </div>
+        <form id="contact-form">
+          <div class="input_box">
+            <input type="text" name="from_name" placeholder="Name" />
+            <input type="text" name="form_email" placeholder="Email" />
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">
+              저에게 메일 보낼 수 있어요 연락주세요!
+            </button>
+          </div>
+        </form>
         <div class="icon_box">
           <h1>Thank you</h1>
-          <p class="p1">저에 대해 궁금하신게 더 있으실까요??</p>
+          <p class="p1">저의 일상을 소개합니다.</p>
           <div class="icon">
             <div class="icon_github">
               <i class="fa-brands fa-github"></i>
               <div class="icon_text">
-                <h2>github</h2>
-                <p>https://</p>
+                <h2>Github</h2>
+                <a href="https://github.com/dghasdf/ui_ux_ezen">
+                  <p class="hover-target">
+                    https://github.com/dghasdf/ui_ux_ezen
+                  </p>
+                </a>
               </div>
             </div>
             <div class="icon_instagram">
               <i class="fa-brands fa-instagram"> </i>
               <div class="icon_text">
-                <h2>instagram</h2>
-                <p>https://</p>
+                <h2>Instagram</h2>
+                <a href="https://www.instagram.com/jyk_212/">
+                  <p class="hover-target">https://www.instagram.com/jyk_212/</p>
+                </a>
               </div>
             </div>
             <div class="icon_facebook">
               <i class="fa-brands fa-facebook-f"></i>
               <div class="icon_text">
                 <h2>facebook</h2>
-                <p>https://</p>
+                <p class="hover-target">www.facebook.com</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <button id="goToBtn">↑</button>
   </body>
 </html>
